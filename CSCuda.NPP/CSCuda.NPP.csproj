@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{585B7918-236A-46ED-B091-1CC33C869484}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSCuda.NPP</RootNamespace>
+    <AssemblyName>CSCuda.NPP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="nppcore.cs" />
+    <Compile Include="nppdefs.cs" />
+    <Compile Include="nppi\nppi.cs" />
+    <Compile Include="nppi\nppi_arithmetic_and_logical_operations.cs" />
+    <Compile Include="nppi\nppi_color_conversion.cs" />
+    <Compile Include="nppi\nppi_compression_functions.cs" />
+    <Compile Include="nppi\nppi_computer_vision.cs" />
+    <Compile Include="nppi\nppi_data_exchange_and_initialization.cs" />
+    <Compile Include="nppi\nppi_filtering_functions.cs" />
+    <Compile Include="nppi\nppi_geometry_transforms.cs" />
+    <Compile Include="nppi\nppi_linear_transforms.cs" />
+    <Compile Include="nppi\nppi_morphological_operations.cs" />
+    <Compile Include="nppi\nppi_statistics_functions.cs" />
+    <Compile Include="nppi\nppi_support_functions.cs" />
+    <Compile Include="nppi\nppi_threshold_and_compare_operations.cs" />
+    <Compile Include="npps\npps.cs" />
+    <Compile Include="npps\npps_arithmetic_and_logical_operations.cs" />
+    <Compile Include="npps\npps_conversion_functions.cs" />
+    <Compile Include="npps\npps_filtering_functions.cs" />
+    <Compile Include="npps\npps_initialization.cs" />
+    <Compile Include="npps\npps_statistics_functions.cs" />
+    <Compile Include="npps\npps_support_functions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
