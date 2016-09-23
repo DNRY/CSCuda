@@ -8,6 +8,6 @@ namespace CSCuda.NPP
 {
     public partial class Nppi
     {
-        private const string dllFileName = @"nppi64_75";
+        private const string dllFileName = @"nppi64_80";
     }
 }

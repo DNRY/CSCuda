@@ -9,7 +9,7 @@ namespace CSCuda
 {
     public static class CudaRuntimeApi
     {
-        private const string cudartString = @"cudart64_75";
+        private const string cudartString = @"cudart64_80";
 
         [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern cudaError cudaDeviceReset();

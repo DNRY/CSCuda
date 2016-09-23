@@ -16,7 +16,7 @@ namespace CSCuda.NPP
     /// </summary>
     public static class NppCore
     {
-        private const string dllFileName = @"nppc64_75.dll";
+        private const string dllFileName = @"nppc64_80.dll";
 
         /// <summary>
         /// Get the NPP library version.
