@@ -37,6 +37,10 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.13.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.13.1\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -47,11 +51,14 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="cublas_v2UnitTest.cs" />
     <Compile Include="cuda_runtime_apiUnitTest.cs" />
     <Compile Include="NPP\nppcoreUnitTest.cs" />
     <Compile Include="NPP\nppi_arithmetic_and_logical_operationsUnitTest.cs" />
@@ -61,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CSCuda.CUBLAS\CSCuda.CUBLAS.csproj">
+      <Project>{297e05b4-f26c-42da-98d5-03bf4cd02ccb}</Project>
+      <Name>CSCuda.CUBLAS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CSCuda.NPP\CSCuda.NPP.csproj">
       <Project>{585b7918-236a-46ed-b091-1cc33c869484}</Project>
       <Name>CSCuda.NPP</Name>
@@ -69,6 +80,9 @@
       <Project>{079ac783-1a60-42e5-a069-f685a2bdf20b}</Project>
       <Name>CSCuda</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
