@@ -34,6 +34,16 @@ namespace CSCuda
             );
 
         [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        public static extern cudaError cudaStreamCreate(
+            ref IntPtr stream
+            );
+
+        [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        public static extern cudaError cudaStreamDestroy(
+            IntPtr stream
+            );
+
+        [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern cudaError cudaMalloc(
             ref IntPtr devPtr,
             ulong size
