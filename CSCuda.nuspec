@@ -23,6 +23,6 @@
     <files>
         <file src="CSCuda\bin\Release\CSCuda.dll" target="lib\net45\CSCuda.dll" />
         <file src="CSCuda.NPP\bin\Release\CSCuda.NPP.dll" target="lib\net45\CSCuda.NPP.dll" />
-        <file src="CSCuda.CUBLAS\bin\Release\CSCuda.NPP.dll" target="lib\net45\CSCuda.CUBLAS.dll" />
+        <file src="CSCuda.CUBLAS\bin\Release\CSCuda.CUBLAS.dll" target="lib\net45\CSCuda.CUBLAS.dll" />
     </files>
 </package>
