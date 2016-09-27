@@ -144,5 +144,16 @@ namespace CSCudaUnitTest
             gchTest.Free();
             gchResult.Free();
         }
+
+        [TestMethod]
+        public void cudaStreamCreate_cudaStreamDestroy_test()
+        {
+            IntPtr stream = IntPtr.Zero;
+            var status = CudaRuntimeApi.cudaStreamCreate(ref stream);
+            Assert.AreEqual(status, cudaError.cudaSuccess);
+
+            status = CudaRuntimeApi.cudaStreamDestroy(stream);
+            Assert.AreEqual(status, cudaError.cudaSuccess);
+        }
     }
 }

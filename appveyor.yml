@@ -1,0 +1,40 @@
+version: 0.1.{build}
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+configuration: Release
+
+build:
+  project: CSCuda.sln
+  publish_nuget: true 
+
+before_build:
+- ps: nuget restore
+
+after_build:
+  - ps: .\pack.ps1
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+test: off
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+artifacts:
+  - path: CSCuda\bin\$(configuration)\CSCuda.dll
+    name: CSCuda.dll
+  - path: CSCuda.NPP\bin\$(configuration)\CSCuda.NPP.dll
+    name: CSCuda.NPP.dll
+  - path: CSCuda.CUBLAS\bin\$(configuration)\CSCuda.CUBLAS.dll
+    name: CSCuda.CUBLAS.dll    
+  - path: '**\CSCuda*.nupkg'

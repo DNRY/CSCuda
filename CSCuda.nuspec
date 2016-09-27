@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>CSCuda</id>
+        <version>$version$</version>
+        <title>CSCuda</title>
+        <authors>HanByul Yang</authors>
+        <owners>DNRY</owners>
+        <projectUrl>https://github.com/DNRY/CSCuda</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>C# wrapper for CUDA</description>
+        <releaseNotes>adopted CUDA 8.0 RC
+
+- cuda_8.0.27</releaseNotes>
+        <copyright>Copyright 2016</copyright>
+        <language>en-US</language>
+        <tags>CUDA NPP</tags>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="System" targetFramework="" />
+            <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+        </frameworkAssemblies>
+    </metadata>
+    <files>
+        <file src="CSCuda\bin\Release\CSCuda.dll" target="lib\net45\CSCuda.dll" />
+        <file src="CSCuda.NPP\bin\Release\CSCuda.NPP.dll" target="lib\net45\CSCuda.NPP.dll" />
+        <file src="CSCuda.CUBLAS\bin\Release\CSCuda.CUBLAS.dll" target="lib\net45\CSCuda.CUBLAS.dll" />
+    </files>
+</package>
