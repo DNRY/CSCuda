@@ -42,6 +42,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -58,7 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="cublas_v2UnitTest.cs" />
+    <Compile Include="cublas_apiUnitTest.cs" />
     <Compile Include="cuda_runtime_apiUnitTest.cs" />
     <Compile Include="NPP\nppcoreUnitTest.cs" />
     <Compile Include="NPP\nppi_arithmetic_and_logical_operationsUnitTest.cs" />
