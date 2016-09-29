@@ -9,16 +9,16 @@ using System.Runtime.InteropServices;
 namespace CSCudaUnitTest
 {
     [TestClass]
-    public class cublas_v2UnitTest
+    public class cublas_apiUnitTest
     {
         [TestMethod]
         public void cublasCreate_cublasDestroy_test()
         {
             var handle = IntPtr.Zero;
-            var cblasStatus = Cublas_v2.cublasCreate(ref handle);
+            var cblasStatus = Cublas_api.cublasCreate_v2(ref handle);
             Assert.AreEqual(cublasStatus_t.CUBLAS_STATUS_SUCCESS, cblasStatus);
 
-            cblasStatus = Cublas_v2.cublasDestroy(handle);
+            cblasStatus = Cublas_api.cublasDestroy_v2(handle);
             Assert.AreEqual(cublasStatus_t.CUBLAS_STATUS_SUCCESS, cblasStatus);
         }
 
@@ -33,7 +33,7 @@ namespace CSCudaUnitTest
             status = CudaRuntimeApi.cudaSetDevice(devId);
 
             var handle = IntPtr.Zero;
-            var cblasStatus = Cublas_v2.cublasCreate(ref handle);
+            var cblasStatus = Cublas_api.cublasCreate_v2(ref handle);
 
             Random rand = new Random();
             int rows_a = rand.Next(2, 10);
@@ -85,7 +85,7 @@ namespace CSCudaUnitTest
             status = CudaRuntimeApi.cudaMemcpy(d_b, h_b, (ulong)B.Length * sizeof(float), cudaMemcpyKind.HostToDevice);
             status = CudaRuntimeApi.cudaMemcpy(d_c, h_c, (ulong)C.Length * sizeof(float), cudaMemcpyKind.HostToDevice);
 
-            cblasStatus = Cublas_v2.cublasSgemm(
+            cblasStatus = Cublas_api.cublasSgemm_v2(
                         handle,
                         cublasOperation_t.CUBLAS_OP_N,
                         cublasOperation_t.CUBLAS_OP_N,
@@ -128,7 +128,124 @@ namespace CSCudaUnitTest
                 Assert.AreEqual(expected[i], resultC[i]);
             }
 
-            cblasStatus = Cublas_v2.cublasDestroy(handle);
+            cblasStatus = Cublas_api.cublasDestroy_v2(handle);
+
+            status = CudaRuntimeApi.cudaFree(d_a);
+            status = CudaRuntimeApi.cudaFree(d_b);
+            status = CudaRuntimeApi.cudaFree(d_c);
+
+            gch_a.Free();
+            gch_b.Free();
+            gch_c.Free();
+        }
+
+        [TestMethod]
+        public void cublasDgemm_test()
+        {
+            int devCount = 0;
+            var status = CudaRuntimeApi.cudaGetDeviceCount(ref devCount);
+            Assert.AreEqual(cudaError.cudaSuccess, status);
+
+            int devId = 0;
+            status = CudaRuntimeApi.cudaSetDevice(devId);
+
+            var handle = IntPtr.Zero;
+            var cblasStatus = Cublas_api.cublasCreate_v2(ref handle);
+
+            Random rand = new Random();
+            int rows_a = rand.Next(2, 10);
+            int cols_a = rand.Next(2, 10);
+
+            int rows_b = cols_a;
+            int cols_b = rand.Next(2, 10);
+
+            int rows_c = rows_a;
+            int cols_c = cols_b;
+
+            double alpha = 1.0;
+            double beta = 0.0;
+
+            var A = new double[rows_a * cols_a];
+            var B = new double[rows_b * cols_b];
+            var C = new double[rows_c * cols_c];
+            var resultC = new double[rows_c * cols_c];
+
+            for (int i = 0; i < A.Length; i++)
+            {
+                A[i] = Convert.ToDouble(rand.Next(0, 10));
+            }
+
+            for (int i = 0; i < B.Length; i++)
+            {
+                B[i] = Convert.ToDouble(rand.Next(0, 10));
+            }
+
+            var d_a = IntPtr.Zero;
+            var d_b = IntPtr.Zero;
+            var d_c = IntPtr.Zero;
+
+            status = CudaRuntimeApi.cudaMalloc(ref d_a, (ulong)A.Length * sizeof(double));
+            status = CudaRuntimeApi.cudaMalloc(ref d_b, (ulong)B.Length * sizeof(double));
+            status = CudaRuntimeApi.cudaMalloc(ref d_c, (ulong)C.Length * sizeof(double));
+
+            var gch_a = GCHandle.Alloc(A, GCHandleType.Pinned);
+            var gch_b = GCHandle.Alloc(B, GCHandleType.Pinned);
+            var gch_c = GCHandle.Alloc(C, GCHandleType.Pinned);
+            var gch_resultC = GCHandle.Alloc(resultC, GCHandleType.Pinned);
+
+            var h_a = Marshal.UnsafeAddrOfPinnedArrayElement(A, 0);
+            var h_b = Marshal.UnsafeAddrOfPinnedArrayElement(B, 0);
+            var h_c = Marshal.UnsafeAddrOfPinnedArrayElement(C, 0);
+            var h_resultC = Marshal.UnsafeAddrOfPinnedArrayElement(resultC, 0);
+
+            status = CudaRuntimeApi.cudaMemcpy(d_a, h_a, (ulong)A.Length * sizeof(double), cudaMemcpyKind.HostToDevice);
+            status = CudaRuntimeApi.cudaMemcpy(d_b, h_b, (ulong)B.Length * sizeof(double), cudaMemcpyKind.HostToDevice);
+            status = CudaRuntimeApi.cudaMemcpy(d_c, h_c, (ulong)C.Length * sizeof(double), cudaMemcpyKind.HostToDevice);
+
+            cblasStatus = Cublas_api.cublasDgemm_v2(
+                        handle,
+                        cublasOperation_t.CUBLAS_OP_N,
+                        cublasOperation_t.CUBLAS_OP_N,
+                        rows_a,
+                        cols_b,
+                        cols_a,
+                        ref alpha,
+                        d_a,
+                        rows_a,
+                        d_b,
+                        rows_b,
+                        ref beta,
+                        d_c,
+                        rows_c
+                        );
+
+            status = CudaRuntimeApi.cudaMemcpy(h_resultC, d_c, (ulong)C.Length * sizeof(double), cudaMemcpyKind.DeviceToHost);
+            var mResultC = Matrix<double>.Build.Dense(rows_c, cols_c, resultC);
+            var mA = Matrix<double>.Build.Dense(rows_a, cols_a, A);
+            var mB = Matrix<double>.Build.Dense(rows_b, cols_b, B);
+            var mExpectedC = Matrix<double>.Build.Dense(rows_c, cols_c, C).Clone();
+            mExpectedC = alpha * mA * mB + beta * mExpectedC;
+            var expected = mExpectedC.ToColumnWiseArray();
+
+            Console.WriteLine("alpha : {0}, beta : {1}", alpha, beta);
+            Console.WriteLine("A");
+            Console.WriteLine(mA.ToString());
+            Console.WriteLine();
+            Console.WriteLine("B");
+            Console.WriteLine(mB.ToString());
+            Console.WriteLine();
+            Console.WriteLine("resultC");
+            Console.WriteLine(mResultC.ToString());
+            Console.WriteLine();
+            Console.WriteLine("expectedC");
+            Console.WriteLine(mExpectedC.ToString());
+
+            for (int i = 0; i < C.Length; i++)
+            {
+                Assert.AreEqual(expected[i], resultC[i]);
+            }
+
+            cblasStatus = Cublas_api.cublasDestroy_v2(handle);
 
             status = CudaRuntimeApi.cudaFree(d_a);
             status = CudaRuntimeApi.cudaFree(d_b);
@@ -150,7 +267,7 @@ namespace CSCudaUnitTest
             status = CudaRuntimeApi.cudaSetDevice(devId);
 
             var handle = IntPtr.Zero;
-            var cblasStatus = Cublas_v2.cublasCreate(ref handle);
+            var cblasStatus = Cublas_api.cublasCreate_v2(ref handle);
 
             Random rand = new Random();
             int rows_a = rand.Next(2, 10);
@@ -227,7 +344,7 @@ namespace CSCudaUnitTest
             status = CudaRuntimeApi.cudaMemcpy(d_b, h_b, (ulong)(B.Length * Marshal.SizeOf(typeof(float2))), cudaMemcpyKind.HostToDevice);
             status = CudaRuntimeApi.cudaMemcpy(d_c, h_c, (ulong)(C.Length * Marshal.SizeOf(typeof(float2))), cudaMemcpyKind.HostToDevice);
 
-            cblasStatus = Cublas_v2.cublasCgemm(
+            cblasStatus = Cublas_api.cublasCgemm_v2(
                         handle,
                         cublasOperation_t.CUBLAS_OP_N,
                         cublasOperation_t.CUBLAS_OP_N,
@@ -275,7 +392,7 @@ namespace CSCudaUnitTest
                 Assert.AreEqual(expected[i], cResultC[i]);
             }
 
-            cblasStatus = Cublas_v2.cublasDestroy(handle);
+            cblasStatus = Cublas_api.cublasDestroy_v2(handle);
 
             status = CudaRuntimeApi.cudaFree(d_a);
             status = CudaRuntimeApi.cudaFree(d_b);
