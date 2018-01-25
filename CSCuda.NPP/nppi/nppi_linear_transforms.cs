@@ -29,7 +29,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMagnitude_32fc32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -48,7 +48,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMagnitudeSqr_32fc32f_C1R(
             IntPtr pSrc,
             int nSrcStep,

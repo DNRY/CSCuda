@@ -26,7 +26,7 @@ namespace CSCuda.NPP
         /// <param name="hpQuantRawTable">Raw quantization table.</param>
         /// <param name="nQualityFactor">Quality factor for the table. Range is [1:100].</param>
         /// <returns>Error code: ::NPP_NULL_POINTER_ERROR is returned if hpQuantRawTable is 0.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiQuantFwdRawTableInit_JPEG_8u(
             IntPtr hpQuantRawTable,
             int nQualityFactor);
@@ -38,7 +38,7 @@ namespace CSCuda.NPP
         /// <param name="hpQuantRawTable">Host pointer to raw quantization table as returned by</param>
         /// <param name="hpQuantFwdRawTable">Forward quantization table for use with</param>
         /// <returns>Error code: ::NPP_NULL_POINTER_ERROR pQuantRawTable is 0.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiQuantFwdTableInit_JPEG_8u16u(
             IntPtr hpQuantRawTable,
             IntPtr hpQuantFwdRawTable);
@@ -50,7 +50,7 @@ namespace CSCuda.NPP
         /// <param name="hpQuantRawTable">Raw quantization table.</param>
         /// <param name="hpQuantFwdRawTable">Inverse quantization table.</param>
         /// <returns>::NPP_NULL_POINTER_ERROR pQuantRawTable or pQuantFwdRawTable is0.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiQuantInvTableInit_JPEG_8u16u(
             IntPtr hpQuantRawTable,
             IntPtr hpQuantFwdRawTable);
@@ -65,7 +65,7 @@ namespace CSCuda.NPP
         /// <param name="pQuantFwdTable">Forward quantization tables for JPEG encoding created using</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTQuantFwd8x8LS_JPEG_8u16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -84,7 +84,7 @@ namespace CSCuda.NPP
         /// <param name="pQuantInvTable">Inverse quantization tables for JPEG decoding created using</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTQuantInv8x8LS_JPEG_16s8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -98,7 +98,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="ppState">Pointer to pointer to DCT state structure.</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTInitAlloc(
             IntPtr ppState);
 
@@ -107,7 +107,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pState">Pointer to DCT state structure.</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTFree(
             IntPtr pState);
 
@@ -122,7 +122,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="pState">Pointer to DCT state structure. This structure must be initialized allocated and initialized using</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTQuantFwd8x8LS_JPEG_8u16s_C1R_NEW(
             IntPtr pSrc,
             int nSrcStep,
@@ -143,7 +143,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="pState">Pointer to DCT state structure. This structure must be initialized allocated and initialized using</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDCTQuantInv8x8LS_JPEG_16s8u_C1R_NEW(
             IntPtr pSrc,
             int nSrcStep,
@@ -158,7 +158,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pSize">Pointer to a variable that will receive the length of the NppiDecodeHuffmanSpec structure.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanSpecGetBufSize_JPEG(
             IntPtr pSize);
 
@@ -169,7 +169,7 @@ namespace CSCuda.NPP
         /// <param name="eTableType">Enum specifying type of table (nppiDCTable or nppiACTable).</param>
         /// <param name="pHuffmanSpec">Pointer to the Huffman table for the decoder</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanSpecInitHost_JPEG(
             IntPtr pRawHuffmanTable,
             NppiHuffmanTableType eTableType,
@@ -182,7 +182,7 @@ namespace CSCuda.NPP
         /// <param name="eTableType">Enum specifying type of table (nppiDCTable or nppiACTable).</param>
         /// <param name="ppHuffmanSpec">Pointer to returned pointer to the Huffman table for the decoder</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanSpecInitAllocHost_JPEG(
             IntPtr pRawHuffmanTable,
             NppiHuffmanTableType eTableType,
@@ -193,7 +193,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pHuffmanSpec">Pointer to the Huffman table for the decoder</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanSpecFreeHost_JPEG(
             IntPtr pHuffmanSpec);
 
@@ -213,7 +213,7 @@ namespace CSCuda.NPP
         /// <param name="pHuffmanTableAC">AC Huffman table.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanScanHost_JPEG_8u16s_P1R(
             IntPtr pSrc,
             Npp32s nLength,
@@ -244,7 +244,7 @@ namespace CSCuda.NPP
         /// <param name="apHuffmanACTable">AC Huffman tables.</param>
         /// <param name="aSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiDecodeHuffmanScanHost_JPEG_8u16s_P3R(
             IntPtr pSrc,
             Npp32s nLength,
@@ -264,7 +264,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pSize">Pointer to a variable that will receive the length of the NppiEncodeHuffmanSpec structure.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanSpecGetBufSize_JPEG(
             IntPtr pSize);
 
@@ -275,7 +275,7 @@ namespace CSCuda.NPP
         /// <param name="eTableType">Enum specifying type of table (nppiDCTable or nppiACTable).</param>
         /// <param name="pHuffmanSpec">Pointer to the Huffman table for the decoder</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanSpecInit_JPEG(
             IntPtr pRawHuffmanTable,
             NppiHuffmanTableType eTableType,
@@ -288,7 +288,7 @@ namespace CSCuda.NPP
         /// <param name="eTableType">Enum specifying type of table (nppiDCTable or nppiACTable).</param>
         /// <param name="ppHuffmanSpec">Pointer to returned pointer to the Huffman table for the encoder</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanSpecInitAlloc_JPEG(
             IntPtr pRawHuffmanTable,
             NppiHuffmanTableType eTableType,
@@ -299,7 +299,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pHuffmanSpec">Pointer to the Huffman table for the encoder</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanSpecFree_JPEG(
             IntPtr pHuffmanSpec);
 
@@ -319,7 +319,7 @@ namespace CSCuda.NPP
         /// <param name="pHuffmanTableAC">AC Huffman table.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanScan_JPEG_8u16s_P1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -351,7 +351,7 @@ namespace CSCuda.NPP
         /// <param name="apHuffmanTableAC">AC Huffman tables.</param>
         /// <param name="aSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanScan_JPEG_8u16s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] apSrc,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aSrcStep,
@@ -387,7 +387,7 @@ namespace CSCuda.NPP
         /// <param name="pHuffmanTableAC">AC Huffman table.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeOptimizeHuffmanScan_JPEG_8u16s_P1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -427,7 +427,7 @@ namespace CSCuda.NPP
         /// <param name="apHuffmanTableAC">AC Huffman tables.</param>
         /// <param name="aSizeROI">roi_specification.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeOptimizeHuffmanScan_JPEG_8u16s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aSrcStep,
@@ -453,7 +453,7 @@ namespace CSCuda.NPP
         /// <param name="oSize">Image Dimension.</param>
         /// <param name="pBufSize">Pointer to variable that returns the size of the temporary buffer.</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeHuffmanGetSize(
             NppiSize oSize,
             int nChannels,
@@ -467,7 +467,7 @@ namespace CSCuda.NPP
         /// <param name="nChannels">Number of channels in the image.</param>
         /// <param name="pBufSize">Pointer to variable that returns the size of the temporary buffer.</param>
         /// <returns>NPP_SUCCESS Indicates no error. Any other value indicates an error or a warning</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(comDll, SetLastError = true)]
         public static extern NppStatus nppiEncodeOptimizeHuffmanGetSize(
             NppiSize oSize,
             int nChannels,

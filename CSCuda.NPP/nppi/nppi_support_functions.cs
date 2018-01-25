@@ -26,7 +26,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_8u_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -39,7 +39,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_8u_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -52,7 +52,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_8u_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -65,7 +65,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_8u_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -78,7 +78,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16u_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -91,7 +91,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16u_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -104,7 +104,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16u_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -117,7 +117,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16u_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -130,7 +130,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16s_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -143,7 +143,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16s_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -156,7 +156,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16s_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -169,7 +169,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16sc_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -182,7 +182,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16sc_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -195,7 +195,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16sc_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -208,7 +208,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_16sc_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -221,7 +221,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32s_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -234,7 +234,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32s_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -247,7 +247,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32s_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -260,7 +260,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32sc_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -273,7 +273,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32sc_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -286,7 +286,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32sc_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -299,7 +299,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32sc_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -312,7 +312,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32f_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -325,7 +325,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32f_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -338,7 +338,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32f_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -351,7 +351,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32f_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -364,7 +364,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32fc_C1(
             int nWidthPixels,
             int nHeightPixels,
@@ -377,7 +377,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32fc_C2(
             int nWidthPixels,
             int nHeightPixels,
@@ -390,7 +390,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32fc_C3(
             int nWidthPixels,
             int nHeightPixels,
@@ -403,7 +403,7 @@ namespace CSCuda.NPP
         /// <param name="nHeightPixels">Image height.</param>
         /// <param name="pStepBytes">line_step.</param>
         /// <returns>Pointer to new image data.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern IntPtr nppiMalloc_32fc_C4(
             int nWidthPixels,
             int nHeightPixels,
@@ -414,7 +414,7 @@ namespace CSCuda.NPP
         /// </summary>
         /// <param name="pData">A pointer to memory allocated using nppiMalloc_<modifier>.</param>
         /// <returns></returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(suDll, SetLastError = true)]
         public static extern void nppiFree(
             IntPtr pData);
 

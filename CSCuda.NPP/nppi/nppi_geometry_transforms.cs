@@ -29,7 +29,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetResizeRect(
             NppiRect oSrcROI,
             IntPtr pDstRect,
@@ -55,7 +55,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -86,7 +86,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -117,7 +117,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -148,7 +148,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -179,7 +179,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -210,7 +210,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -241,7 +241,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -272,7 +272,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -303,7 +303,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -334,7 +334,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -365,7 +365,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -396,7 +396,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -427,7 +427,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -458,7 +458,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -489,7 +489,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -520,7 +520,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -551,7 +551,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -582,7 +582,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_16s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -613,7 +613,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -644,7 +644,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -675,7 +675,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -706,7 +706,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -737,7 +737,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -768,7 +768,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -799,7 +799,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -830,7 +830,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -861,7 +861,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -892,7 +892,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -923,7 +923,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -954,7 +954,7 @@ namespace CSCuda.NPP
         /// <param name="nYShift">Source pixel shift in y-direction.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_64f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -977,7 +977,7 @@ namespace CSCuda.NPP
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <param name="eInterpolationMode">The type of eInterpolation to perform resampling. Currently only supports NPPI_INTER_LANCZOS3_Advanced.</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeAdvancedGetBufferHostSize_8u_C1R(
             NppiSize oSrcROI,
             NppiSize oDstROI,
@@ -999,7 +999,7 @@ namespace CSCuda.NPP
         /// <param name="pBuffer">Device buffer that is used during calculations.</param>
         /// <param name="eInterpolationMode">The type of eInterpolation to perform resampling. Currently only supports NPPI_INTER_LANCZOS3_Advanced.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResizeSqrPixel_8u_C1R_Advanced(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1027,7 +1027,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1054,7 +1054,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1081,7 +1081,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1108,7 +1108,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1135,7 +1135,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1162,7 +1162,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1189,7 +1189,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1216,7 +1216,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1243,7 +1243,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1270,7 +1270,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1297,7 +1297,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1324,7 +1324,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1351,7 +1351,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1378,7 +1378,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1405,7 +1405,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1432,7 +1432,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1459,7 +1459,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1486,7 +1486,7 @@ namespace CSCuda.NPP
         /// <param name="nYFactor">Factor by which y dimension is changed.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiResize_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1515,7 +1515,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1546,7 +1546,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1577,7 +1577,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1608,7 +1608,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1639,7 +1639,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1670,7 +1670,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1701,7 +1701,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1732,7 +1732,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1763,7 +1763,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1794,7 +1794,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1825,7 +1825,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1856,7 +1856,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -1887,7 +1887,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1918,7 +1918,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1949,7 +1949,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -1980,7 +1980,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2011,7 +2011,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2042,7 +2042,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_16s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2073,7 +2073,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2104,7 +2104,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2135,7 +2135,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2166,7 +2166,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2197,7 +2197,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2228,7 +2228,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2259,7 +2259,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2290,7 +2290,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2321,7 +2321,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2352,7 +2352,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2383,7 +2383,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2414,7 +2414,7 @@ namespace CSCuda.NPP
         /// <param name="oDstSizeROI">Region of interest size in the destination image.</param>
         /// <param name="eInterpolation">The type of eInterpolation to perform resampling.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRemap_64f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -2438,7 +2438,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftX">Post-rotation shift in x-direction</param>
         /// <param name="nShiftY">Post-rotation shift in y-direction</param>
         /// <returns>roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetRotateQuad(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]double[] aQuad,
@@ -2455,7 +2455,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftX">Post-rotation shift in x-direction.</param>
         /// <param name="nShiftY">Post-rotation shift in y-direction.</param>
         /// <returns>roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetRotateBound(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 2)]double[] aBoundingBox,
@@ -2473,7 +2473,7 @@ namespace CSCuda.NPP
         /// <param name="aQuad">The destination quadrilateral.</param>
         /// <param name="aCoeffs">The resulting affine transform coefficients.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetAffineTransform(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]double[] aQuad,
@@ -2487,7 +2487,7 @@ namespace CSCuda.NPP
         /// <param name="aQuad">The resulting destination quadrangle.</param>
         /// <param name="aCoeffs">The afine transform coefficients.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetAffineQuad(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]double[] aQuad,
@@ -2501,7 +2501,7 @@ namespace CSCuda.NPP
         /// <param name="aBound">The resulting bounding box.</param>
         /// <param name="aCoeffs">The afine transform coefficients.</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetAffineBound(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 2)]double[] aBound,
@@ -2514,7 +2514,7 @@ namespace CSCuda.NPP
         /// <param name="quad">Destination quadrangle</param>
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetPerspectiveTransform(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]double[] quad,
@@ -2527,7 +2527,7 @@ namespace CSCuda.NPP
         /// <param name="quad">Destination quadrangle</param>
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetPerspectiveQuad(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]double[] quad,
@@ -2540,7 +2540,7 @@ namespace CSCuda.NPP
         /// <param name="bound">Bounding box of the transformed source ROI</param>
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <returns>Error codes:</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiGetPerspectiveBound(
             NppiRect oSrcROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 2)]double[] bound,
@@ -2561,7 +2561,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2590,7 +2590,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2619,7 +2619,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2648,7 +2648,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2677,7 +2677,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2706,7 +2706,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2735,7 +2735,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2764,7 +2764,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2793,7 +2793,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2822,7 +2822,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2851,7 +2851,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2880,7 +2880,7 @@ namespace CSCuda.NPP
         /// <param name="nShiftY">Shift along vertical axis</param>
         /// <param name="eInterpolation">The type of interpolation to perform resampling</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiRotate_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -2904,7 +2904,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2921,7 +2921,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2938,7 +2938,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2955,7 +2955,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2972,7 +2972,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2989,7 +2989,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3006,7 +3006,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3023,7 +3023,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3040,7 +3040,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3057,7 +3057,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3074,7 +3074,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3091,7 +3091,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3108,7 +3108,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3125,7 +3125,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3142,7 +3142,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3159,7 +3159,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3176,7 +3176,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3193,7 +3193,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3210,7 +3210,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3227,7 +3227,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3244,7 +3244,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3261,7 +3261,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3278,7 +3278,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3295,7 +3295,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3312,7 +3312,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3329,7 +3329,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3346,7 +3346,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3363,7 +3363,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3380,7 +3380,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3397,7 +3397,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3414,7 +3414,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3431,7 +3431,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3448,7 +3448,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3465,7 +3465,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3482,7 +3482,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3499,7 +3499,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3516,7 +3516,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3533,7 +3533,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3550,7 +3550,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3567,7 +3567,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="flip">Specifies the axis about which the image is to be mirrored.</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiMirror_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3587,7 +3587,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3612,7 +3612,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3637,7 +3637,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3662,7 +3662,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3687,7 +3687,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -3712,7 +3712,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -3737,7 +3737,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3762,7 +3762,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3787,7 +3787,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3812,7 +3812,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3837,7 +3837,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -3862,7 +3862,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -3887,7 +3887,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3912,7 +3912,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3937,7 +3937,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3962,7 +3962,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -3987,7 +3987,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4012,7 +4012,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4037,7 +4037,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4062,7 +4062,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4087,7 +4087,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4112,7 +4112,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4137,7 +4137,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4162,7 +4162,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4187,7 +4187,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4212,7 +4212,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4237,7 +4237,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4262,7 +4262,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4287,7 +4287,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] aSrc,
             NppiSize oSrcSize,
@@ -4312,7 +4312,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffine_64f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] aSrc,
             NppiSize oSrcSize,
@@ -4337,7 +4337,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4362,7 +4362,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4387,7 +4387,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4412,7 +4412,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4437,7 +4437,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4462,7 +4462,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4487,7 +4487,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4512,7 +4512,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4537,7 +4537,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4562,7 +4562,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4587,7 +4587,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4612,7 +4612,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4637,7 +4637,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4662,7 +4662,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4687,7 +4687,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4712,7 +4712,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4737,7 +4737,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4762,7 +4762,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4787,7 +4787,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4812,7 +4812,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4837,7 +4837,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4862,7 +4862,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4887,7 +4887,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4912,7 +4912,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Affine transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineBack_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -4938,7 +4938,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4965,7 +4965,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -4992,7 +4992,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5019,7 +5019,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5046,7 +5046,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5073,7 +5073,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5100,7 +5100,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5127,7 +5127,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5154,7 +5154,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5181,7 +5181,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5208,7 +5208,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5235,7 +5235,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5262,7 +5262,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5289,7 +5289,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5316,7 +5316,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5343,7 +5343,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5370,7 +5370,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5397,7 +5397,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5424,7 +5424,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5451,7 +5451,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5478,7 +5478,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5505,7 +5505,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5532,7 +5532,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5559,7 +5559,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpAffineQuad_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5585,7 +5585,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5610,7 +5610,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5635,7 +5635,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5660,7 +5660,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5685,7 +5685,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5710,7 +5710,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5735,7 +5735,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5760,7 +5760,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5785,7 +5785,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5810,7 +5810,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5835,7 +5835,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5860,7 +5860,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -5885,7 +5885,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5910,7 +5910,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5935,7 +5935,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5960,7 +5960,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -5985,7 +5985,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6010,7 +6010,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6035,7 +6035,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6060,7 +6060,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6085,7 +6085,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6110,7 +6110,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6135,7 +6135,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6160,7 +6160,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspective_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6185,7 +6185,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6210,7 +6210,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6235,7 +6235,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6260,7 +6260,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6285,7 +6285,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6310,7 +6310,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6335,7 +6335,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6360,7 +6360,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6385,7 +6385,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6410,7 +6410,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6435,7 +6435,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6460,7 +6460,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6485,7 +6485,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6510,7 +6510,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6535,7 +6535,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6560,7 +6560,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6585,7 +6585,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6610,7 +6610,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6635,7 +6635,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6660,7 +6660,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6685,7 +6685,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6710,7 +6710,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6735,7 +6735,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6760,7 +6760,7 @@ namespace CSCuda.NPP
         /// <param name="aCoeffs">Perspective transform coefficients</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveBack_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6786,7 +6786,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6813,7 +6813,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6840,7 +6840,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6867,7 +6867,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6894,7 +6894,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6921,7 +6921,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_8u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -6948,7 +6948,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -6975,7 +6975,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7002,7 +7002,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7029,7 +7029,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7056,7 +7056,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -7083,7 +7083,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_16u_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -7110,7 +7110,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7137,7 +7137,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7164,7 +7164,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7191,7 +7191,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7218,7 +7218,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -7245,7 +7245,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32s_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -7272,7 +7272,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_C1R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7299,7 +7299,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_C3R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7326,7 +7326,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_C4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7353,7 +7353,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_AC4R(
             IntPtr pSrc,
             NppiSize oSrcSize,
@@ -7380,7 +7380,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_P3R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]IntPtr[] pSrc,
             NppiSize oSrcSize,
@@ -7407,7 +7407,7 @@ namespace CSCuda.NPP
         /// <param name="aDstQuad">Destination quad.</param>
         /// <param name="eInterpolation">Interpolation mode: can be NPPI_INTER_NN, NPPI_INTER_LINEAR or NPPI_INTER_CUBIC</param>
         /// <returns>image_data_error_codes, roi_error_codes,</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(gDll, SetLastError = true)]
         public static extern NppStatus nppiWarpPerspectiveQuad_32f_P4R(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]IntPtr[] pSrc,
             NppiSize oSrcSize,
