@@ -28,7 +28,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="pSum">Pointer to the computed sum.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -45,7 +45,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="pSum">Pointer to the computed sum.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u64s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -62,7 +62,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="pSum">Pointer to the computed sum.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -79,7 +79,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="pSum">Pointer to the computed sum.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -96,7 +96,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pSum">Pointer to the computed sum.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -113,7 +113,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -130,7 +130,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -147,7 +147,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -164,7 +164,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -181,7 +181,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel (alpha channel is not computed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -198,7 +198,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel (alpha channel is not computed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -215,7 +215,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel (alpha channel is not computed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -232,7 +232,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel (alpha channel is not computed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -249,7 +249,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -266,7 +266,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_8u64s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -283,7 +283,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -300,7 +300,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -317,7 +317,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aSum">Array that contains computed sum for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSum_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -331,7 +331,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -342,7 +342,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u64s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -353,7 +353,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -364,7 +364,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -375,7 +375,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -386,7 +386,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -397,7 +397,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -408,7 +408,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -419,7 +419,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -430,7 +430,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -441,7 +441,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -452,7 +452,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -463,7 +463,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -474,7 +474,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u64s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -485,7 +485,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -496,7 +496,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -507,7 +507,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -518,7 +518,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSumGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -532,7 +532,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMin">Pointer to the computed minimum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -549,7 +549,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMin">Pointer to the computed minimum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -566,7 +566,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMin">Pointer to the computed minimum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -583,7 +583,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMin">Pointer to the computed minimum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -600,7 +600,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -617,7 +617,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -634,7 +634,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -651,7 +651,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -668,7 +668,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -685,7 +685,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -702,7 +702,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -719,7 +719,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -736,7 +736,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -753,7 +753,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -770,7 +770,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -787,7 +787,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMin">Array that contains the computed minimum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMin_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -801,7 +801,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -812,7 +812,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -823,7 +823,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -834,7 +834,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -845,7 +845,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -856,7 +856,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -867,7 +867,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -878,7 +878,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -889,7 +889,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -900,7 +900,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -911,7 +911,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -922,7 +922,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -933,7 +933,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -944,7 +944,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -955,7 +955,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -966,7 +966,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -982,7 +982,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image min value.</param>
         /// <param name="pIndexY">Ppointer to the Y coordinate of the image min value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1003,7 +1003,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image min value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image min value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1024,7 +1024,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image min value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image min value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1045,7 +1045,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image min value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image min value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1066,7 +1066,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1087,7 +1087,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1108,7 +1108,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1129,7 +1129,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1150,7 +1150,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1171,7 +1171,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1192,7 +1192,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1213,7 +1213,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1234,7 +1234,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1255,7 +1255,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1276,7 +1276,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1297,7 +1297,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image min values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image min values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndx_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1313,7 +1313,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1324,7 +1324,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1335,7 +1335,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1346,7 +1346,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1357,7 +1357,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1368,7 +1368,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1379,7 +1379,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1390,7 +1390,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1401,7 +1401,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1412,7 +1412,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1423,7 +1423,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1434,7 +1434,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1445,7 +1445,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1456,7 +1456,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1467,7 +1467,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1478,7 +1478,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinIndxGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1492,7 +1492,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMax">Pointer to the computed maximum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1509,7 +1509,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMax">Pointer to the computed maximum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1526,7 +1526,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMax">Pointer to the computed maximum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1543,7 +1543,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMax">Pointer to the computed maximum result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1560,7 +1560,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1577,7 +1577,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1594,7 +1594,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1611,7 +1611,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1628,7 +1628,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1645,7 +1645,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1662,7 +1662,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1679,7 +1679,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1696,7 +1696,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1713,7 +1713,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1730,7 +1730,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1747,7 +1747,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMax">Array that contains the computed maximum results for each channel (alpha channel is not processed).</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMax_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1761,7 +1761,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1772,7 +1772,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1783,7 +1783,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1794,7 +1794,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1805,7 +1805,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1816,7 +1816,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1827,7 +1827,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1838,7 +1838,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1849,7 +1849,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1860,7 +1860,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1871,7 +1871,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1882,7 +1882,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1893,7 +1893,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1904,7 +1904,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1915,7 +1915,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1926,7 +1926,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -1942,7 +1942,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image max value.</param>
         /// <param name="pIndexY">Ppointer to the Y coordinate of the image max value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1963,7 +1963,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image max value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image max value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1984,7 +1984,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image max value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image max value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2005,7 +2005,7 @@ namespace CSCuda.NPP
         /// <param name="pIndexX">Pointer to the X coordinate of the image max value.</param>
         /// <param name="pIndexY">Pointer to the Y coordinate of the image max value.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2026,7 +2026,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2047,7 +2047,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2068,7 +2068,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2089,7 +2089,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2110,7 +2110,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2131,7 +2131,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2152,7 +2152,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2173,7 +2173,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2194,7 +2194,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2215,7 +2215,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2236,7 +2236,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2257,7 +2257,7 @@ namespace CSCuda.NPP
         /// <param name="aIndexX">Array that contains the X coordinates of the image max values.</param>
         /// <param name="aIndexY">Array that contains the Y coordinates of the image max values.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndx_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2273,7 +2273,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2284,7 +2284,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2295,7 +2295,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2306,7 +2306,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2317,7 +2317,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2328,7 +2328,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2339,7 +2339,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2350,7 +2350,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2361,7 +2361,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2372,7 +2372,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2383,7 +2383,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2394,7 +2394,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2405,7 +2405,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2416,7 +2416,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2427,7 +2427,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2438,7 +2438,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxIndxGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2453,7 +2453,7 @@ namespace CSCuda.NPP
         /// <param name="pMax">Pointer to the computed maximal result.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2472,7 +2472,7 @@ namespace CSCuda.NPP
         /// <param name="pMax">Pointer to the computed maximal result.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2491,7 +2491,7 @@ namespace CSCuda.NPP
         /// <param name="pMax">Pointer to the computed maximal result.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2510,7 +2510,7 @@ namespace CSCuda.NPP
         /// <param name="pMax">Pointer to the computed maximal result.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2529,7 +2529,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2548,7 +2548,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2567,7 +2567,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2586,7 +2586,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2605,7 +2605,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2624,7 +2624,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2643,7 +2643,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2662,7 +2662,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2681,7 +2681,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2700,7 +2700,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2719,7 +2719,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2738,7 +2738,7 @@ namespace CSCuda.NPP
         /// <param name="aMax">Array that contains the maxima.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMax_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2753,7 +2753,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2764,7 +2764,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2775,7 +2775,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2786,7 +2786,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2797,7 +2797,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2808,7 +2808,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2819,7 +2819,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2830,7 +2830,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2841,7 +2841,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2852,7 +2852,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2863,7 +2863,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2874,7 +2874,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2885,7 +2885,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2896,7 +2896,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2907,7 +2907,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2918,7 +2918,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -2935,7 +2935,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2958,7 +2958,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2981,7 +2981,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3004,7 +3004,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3029,7 +3029,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3056,7 +3056,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3083,7 +3083,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3110,7 +3110,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3136,7 +3136,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8u_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3161,7 +3161,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8s_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3186,7 +3186,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_16u_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3211,7 +3211,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_32f_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3238,7 +3238,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3267,7 +3267,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3296,7 +3296,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3325,7 +3325,7 @@ namespace CSCuda.NPP
         /// <param name="pMaxIndex">Pointer to the indicies (X and Y coordinates) of the maximum value.</param>
         /// <param name="pDeviceBuffer">Buffer to a scratch memory. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified. If the mask is filled with zeros, then all the returned values are zeros, i.e., pMinIndex = {0, 0}, pMaxIndex = {0, 0}, pMinValue = 0, pMaxValue = 0. If any of pMinValue, pMaxValue, pMinIndex, or pMaxIndex is not needed, zero pointer must be passed correspondingly.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndx_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3345,7 +3345,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3356,7 +3356,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3367,7 +3367,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3378,7 +3378,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3389,7 +3389,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3400,7 +3400,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3411,7 +3411,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3422,7 +3422,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3433,7 +3433,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8u_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3444,7 +3444,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8s_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3455,7 +3455,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_16u_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3466,7 +3466,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_32f_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3477,7 +3477,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3488,7 +3488,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3499,7 +3499,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3510,7 +3510,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinMaxIndxGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -3524,7 +3524,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3541,7 +3541,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3558,7 +3558,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3575,7 +3575,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3592,7 +3592,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3609,7 +3609,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3626,7 +3626,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3643,7 +3643,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3660,7 +3660,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3677,7 +3677,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3694,7 +3694,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3711,7 +3711,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3728,7 +3728,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3745,7 +3745,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3762,7 +3762,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3779,7 +3779,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="aMean">Array that contains the computed mean results.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3798,7 +3798,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3819,7 +3819,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3840,7 +3840,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3861,7 +3861,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3883,7 +3883,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3906,7 +3906,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3929,7 +3929,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3952,7 +3952,7 @@ namespace CSCuda.NPP
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer Use</param>
         /// <param name="pMean">Pointer to the computed mean result.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -3977,7 +3977,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4004,7 +4004,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4031,7 +4031,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4058,7 +4058,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4077,7 +4077,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4088,7 +4088,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4099,7 +4099,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4110,7 +4110,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4121,7 +4121,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4132,7 +4132,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4143,7 +4143,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4154,7 +4154,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4165,7 +4165,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4176,7 +4176,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4187,7 +4187,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4198,7 +4198,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4209,7 +4209,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4220,7 +4220,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4231,7 +4231,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4242,7 +4242,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4253,7 +4253,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4264,7 +4264,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4275,7 +4275,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4286,7 +4286,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4297,7 +4297,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4308,7 +4308,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4319,7 +4319,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4330,7 +4330,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4345,7 +4345,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4364,7 +4364,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4383,7 +4383,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4402,7 +4402,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4423,7 +4423,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4446,7 +4446,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4469,7 +4469,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4492,7 +4492,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4514,7 +4514,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8u_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4535,7 +4535,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8s_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4556,7 +4556,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_16u_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4577,7 +4577,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_32f_C3CR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4600,7 +4600,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4625,7 +4625,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4650,7 +4650,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4675,7 +4675,7 @@ namespace CSCuda.NPP
         /// <param name="pMean">Pointer to the computed mean.</param>
         /// <param name="pStdDev">Pointer to the computed standard deviation.</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMean_StdDev_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -4693,7 +4693,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4704,7 +4704,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4715,7 +4715,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4726,7 +4726,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4737,7 +4737,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4748,7 +4748,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4759,7 +4759,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4770,7 +4770,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4781,7 +4781,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8u_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4792,7 +4792,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8s_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4803,7 +4803,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_16u_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4814,7 +4814,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_32f_C3CR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4825,7 +4825,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4836,7 +4836,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4847,7 +4847,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4858,7 +4858,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMeanStdDevGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -4872,7 +4872,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4889,7 +4889,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4906,7 +4906,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4923,7 +4923,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4940,7 +4940,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4957,7 +4957,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4974,7 +4974,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4991,7 +4991,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5008,7 +5008,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5025,7 +5025,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5042,7 +5042,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5059,7 +5059,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5076,7 +5076,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5093,7 +5093,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5110,7 +5110,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5127,7 +5127,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5144,7 +5144,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5163,7 +5163,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5184,7 +5184,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5205,7 +5205,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5226,7 +5226,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5248,7 +5248,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5271,7 +5271,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5294,7 +5294,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5317,7 +5317,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_Inf_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5334,7 +5334,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5345,7 +5345,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5356,7 +5356,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5367,7 +5367,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5378,7 +5378,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5389,7 +5389,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5400,7 +5400,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5411,7 +5411,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5422,7 +5422,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5433,7 +5433,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5444,7 +5444,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5455,7 +5455,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5466,7 +5466,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5477,7 +5477,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5488,7 +5488,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5499,7 +5499,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5510,7 +5510,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5521,7 +5521,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5532,7 +5532,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5543,7 +5543,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5554,7 +5554,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5565,7 +5565,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5576,7 +5576,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5587,7 +5587,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5598,7 +5598,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormInfGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -5612,7 +5612,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5629,7 +5629,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5646,7 +5646,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5663,7 +5663,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5680,7 +5680,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5697,7 +5697,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5714,7 +5714,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5731,7 +5731,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5748,7 +5748,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5765,7 +5765,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5782,7 +5782,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5799,7 +5799,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5816,7 +5816,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5833,7 +5833,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5850,7 +5850,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5867,7 +5867,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -5886,7 +5886,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5907,7 +5907,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5928,7 +5928,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5949,7 +5949,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5971,7 +5971,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5994,7 +5994,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6017,7 +6017,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6040,7 +6040,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if the step of the source image cannot be divided by 4, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L1_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6057,7 +6057,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6068,7 +6068,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6079,7 +6079,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6090,7 +6090,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6101,7 +6101,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6112,7 +6112,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6123,7 +6123,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6134,7 +6134,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6145,7 +6145,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6156,7 +6156,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6167,7 +6167,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6178,7 +6178,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6189,7 +6189,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6200,7 +6200,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6211,7 +6211,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6222,7 +6222,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6233,7 +6233,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6244,7 +6244,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6255,7 +6255,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6266,7 +6266,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6277,7 +6277,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6288,7 +6288,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6299,7 +6299,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6310,7 +6310,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL1GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6324,7 +6324,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6341,7 +6341,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6358,7 +6358,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6375,7 +6375,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6392,7 +6392,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6409,7 +6409,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6426,7 +6426,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6443,7 +6443,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6460,7 +6460,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6477,7 +6477,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6494,7 +6494,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6511,7 +6511,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Three-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6528,7 +6528,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6545,7 +6545,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6562,7 +6562,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6579,7 +6579,7 @@ namespace CSCuda.NPP
         /// <param name="aNorm">Array that contains the norm values of Four-channels.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -6598,7 +6598,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6619,7 +6619,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8s_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6640,7 +6640,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6661,7 +6661,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if the step of the source image cannot be divided by 4.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_C1MR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6683,7 +6683,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6706,7 +6706,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_8s_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6729,7 +6729,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_16u_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6752,7 +6752,7 @@ namespace CSCuda.NPP
         /// <param name="pNorm">Pointer to the norm value.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if the step of the source image cannot be divided by 4, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNorm_L2_32f_C3CMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6769,7 +6769,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6780,7 +6780,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6791,7 +6791,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6802,7 +6802,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6813,7 +6813,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6824,7 +6824,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6835,7 +6835,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6846,7 +6846,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6857,7 +6857,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6868,7 +6868,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6879,7 +6879,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6890,7 +6890,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6901,7 +6901,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6912,7 +6912,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6923,7 +6923,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6934,7 +6934,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6945,7 +6945,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6956,7 +6956,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6967,7 +6967,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6978,7 +6978,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -6989,7 +6989,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7000,7 +7000,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7011,7 +7011,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7022,7 +7022,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormL2GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7038,7 +7038,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7059,7 +7059,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7080,7 +7080,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7101,7 +7101,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7122,7 +7122,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7143,7 +7143,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7164,7 +7164,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7185,7 +7185,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7206,7 +7206,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7227,7 +7227,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7248,7 +7248,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7269,7 +7269,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7290,7 +7290,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7311,7 +7311,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7332,7 +7332,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7353,7 +7353,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7376,7 +7376,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7401,7 +7401,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7426,7 +7426,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7451,7 +7451,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_Inf_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7469,7 +7469,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7480,7 +7480,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7491,7 +7491,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7502,7 +7502,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7513,7 +7513,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7524,7 +7524,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7535,7 +7535,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7546,7 +7546,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7557,7 +7557,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7568,7 +7568,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7579,7 +7579,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7590,7 +7590,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7601,7 +7601,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7612,7 +7612,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7623,7 +7623,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7634,7 +7634,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7645,7 +7645,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7656,7 +7656,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7667,7 +7667,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7678,7 +7678,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7689,7 +7689,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7700,7 +7700,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7711,7 +7711,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7722,7 +7722,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffInfGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7733,7 +7733,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7744,7 +7744,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7755,7 +7755,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7766,7 +7766,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7777,7 +7777,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7788,7 +7788,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7799,7 +7799,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7810,7 +7810,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7821,7 +7821,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7832,7 +7832,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32fc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7843,7 +7843,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7854,7 +7854,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7865,7 +7865,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7876,7 +7876,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7887,7 +7887,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7898,7 +7898,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7909,7 +7909,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7920,7 +7920,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7931,7 +7931,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7942,7 +7942,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7953,7 +7953,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32fc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7964,7 +7964,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_64f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7975,7 +7975,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7986,7 +7986,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -7997,7 +7997,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8008,7 +8008,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8019,7 +8019,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8030,7 +8030,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8041,7 +8041,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8052,7 +8052,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8063,7 +8063,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8074,7 +8074,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32fc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8085,7 +8085,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8096,7 +8096,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8107,7 +8107,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_8s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8118,7 +8118,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8129,7 +8129,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8140,7 +8140,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_16sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8151,7 +8151,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8162,7 +8162,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8173,7 +8173,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8184,7 +8184,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8195,7 +8195,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_32fc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8206,7 +8206,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumErrorGetBufferHostSize_64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8217,7 +8217,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8228,7 +8228,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8239,7 +8239,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8250,7 +8250,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8261,7 +8261,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8272,7 +8272,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8283,7 +8283,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8294,7 +8294,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8305,7 +8305,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8316,7 +8316,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32fc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8327,7 +8327,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8338,7 +8338,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8349,7 +8349,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8360,7 +8360,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8371,7 +8371,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8382,7 +8382,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8393,7 +8393,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8404,7 +8404,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8415,7 +8415,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8426,7 +8426,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8437,7 +8437,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32fc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8448,7 +8448,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_64f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8459,7 +8459,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8470,7 +8470,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8481,7 +8481,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8492,7 +8492,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8503,7 +8503,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8514,7 +8514,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8525,7 +8525,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8536,7 +8536,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8547,7 +8547,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8558,7 +8558,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32fc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8569,7 +8569,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8580,7 +8580,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8591,7 +8591,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_8s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8602,7 +8602,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8613,7 +8613,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8624,7 +8624,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_16sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8635,7 +8635,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8646,7 +8646,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8657,7 +8657,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8668,7 +8668,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8679,7 +8679,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_32fc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8690,7 +8690,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageErrorGetBufferHostSize_64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8701,7 +8701,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8712,7 +8712,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8723,7 +8723,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8734,7 +8734,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8745,7 +8745,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8756,7 +8756,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8767,7 +8767,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8778,7 +8778,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8789,7 +8789,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8800,7 +8800,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32fc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8811,7 +8811,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8822,7 +8822,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8833,7 +8833,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8844,7 +8844,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8855,7 +8855,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8866,7 +8866,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8877,7 +8877,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8888,7 +8888,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8899,7 +8899,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8910,7 +8910,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8921,7 +8921,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32fc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8932,7 +8932,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_64f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8943,7 +8943,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8954,7 +8954,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8965,7 +8965,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8976,7 +8976,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8987,7 +8987,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -8998,7 +8998,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9009,7 +9009,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9020,7 +9020,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9031,7 +9031,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9042,7 +9042,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32fc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9053,7 +9053,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9064,7 +9064,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9075,7 +9075,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_8s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9086,7 +9086,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9097,7 +9097,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9108,7 +9108,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_16sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9119,7 +9119,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9130,7 +9130,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9141,7 +9141,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9152,7 +9152,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9163,7 +9163,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_32fc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9174,7 +9174,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeErrorGetBufferHostSize_64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9185,7 +9185,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9196,7 +9196,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9207,7 +9207,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9218,7 +9218,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9229,7 +9229,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9240,7 +9240,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9251,7 +9251,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9262,7 +9262,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32sc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9273,7 +9273,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9284,7 +9284,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32fc_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9295,7 +9295,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9306,7 +9306,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9317,7 +9317,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9328,7 +9328,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9339,7 +9339,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9350,7 +9350,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9361,7 +9361,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32u_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9372,7 +9372,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32s_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9383,7 +9383,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32sc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9394,7 +9394,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9405,7 +9405,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32fc_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9416,7 +9416,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_64f_C2R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9427,7 +9427,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9438,7 +9438,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9449,7 +9449,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9460,7 +9460,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9471,7 +9471,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9482,7 +9482,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9493,7 +9493,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9504,7 +9504,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32sc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9515,7 +9515,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9526,7 +9526,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32fc_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9537,7 +9537,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9548,7 +9548,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9559,7 +9559,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_8s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9570,7 +9570,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9581,7 +9581,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9592,7 +9592,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_16sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9603,7 +9603,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9614,7 +9614,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9625,7 +9625,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32sc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9636,7 +9636,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9647,7 +9647,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_32fc_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9658,7 +9658,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeErrorGetBufferHostSize_64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -9674,7 +9674,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9695,7 +9695,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9716,7 +9716,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9737,7 +9737,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9758,7 +9758,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9779,7 +9779,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9800,7 +9800,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9821,7 +9821,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9842,7 +9842,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9863,7 +9863,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9884,7 +9884,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9905,7 +9905,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9926,7 +9926,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9947,7 +9947,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9968,7 +9968,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9989,7 +9989,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10012,7 +10012,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10037,7 +10037,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10062,7 +10062,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10087,7 +10087,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10113,7 +10113,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10140,7 +10140,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10167,7 +10167,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10194,7 +10194,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L1_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10213,7 +10213,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10224,7 +10224,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10235,7 +10235,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10246,7 +10246,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10257,7 +10257,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10268,7 +10268,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10279,7 +10279,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10290,7 +10290,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10301,7 +10301,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10312,7 +10312,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10323,7 +10323,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10334,7 +10334,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10345,7 +10345,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10356,7 +10356,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10367,7 +10367,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10378,7 +10378,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10389,7 +10389,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10400,7 +10400,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10411,7 +10411,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10422,7 +10422,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10433,7 +10433,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10444,7 +10444,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10455,7 +10455,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10466,7 +10466,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL1GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -10482,7 +10482,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10503,7 +10503,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10524,7 +10524,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10545,7 +10545,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10566,7 +10566,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10587,7 +10587,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10608,7 +10608,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10629,7 +10629,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10650,7 +10650,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10671,7 +10671,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10692,7 +10692,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10713,7 +10713,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10734,7 +10734,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10755,7 +10755,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10776,7 +10776,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10797,7 +10797,7 @@ namespace CSCuda.NPP
         /// <param name="aNormDiff">Array that contains computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10820,7 +10820,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10845,7 +10845,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10870,7 +10870,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10895,7 +10895,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10921,7 +10921,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10948,7 +10948,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10975,7 +10975,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11002,7 +11002,7 @@ namespace CSCuda.NPP
         /// <param name="pNormDiff">Pointer to the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiff_L2_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11021,7 +11021,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11032,7 +11032,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11043,7 +11043,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11054,7 +11054,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11065,7 +11065,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11076,7 +11076,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11087,7 +11087,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11098,7 +11098,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11109,7 +11109,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11120,7 +11120,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11131,7 +11131,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11142,7 +11142,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11153,7 +11153,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11164,7 +11164,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11175,7 +11175,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11186,7 +11186,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11197,7 +11197,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11208,7 +11208,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11219,7 +11219,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11230,7 +11230,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11241,7 +11241,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11252,7 +11252,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11263,7 +11263,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11274,7 +11274,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormDiffL2GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11290,7 +11290,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11311,7 +11311,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11332,7 +11332,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11353,7 +11353,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11374,7 +11374,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11395,7 +11395,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11416,7 +11416,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11437,7 +11437,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11458,7 +11458,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11479,7 +11479,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11500,7 +11500,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11521,7 +11521,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11542,7 +11542,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11563,7 +11563,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11584,7 +11584,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11605,7 +11605,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11628,7 +11628,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11653,7 +11653,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11678,7 +11678,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11703,7 +11703,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11729,7 +11729,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11756,7 +11756,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11783,7 +11783,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11810,7 +11810,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the infinity norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the infinity norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_Inf_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -11829,7 +11829,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11840,7 +11840,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11851,7 +11851,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11862,7 +11862,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11873,7 +11873,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11884,7 +11884,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11895,7 +11895,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11906,7 +11906,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11917,7 +11917,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11928,7 +11928,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11939,7 +11939,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11950,7 +11950,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11961,7 +11961,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11972,7 +11972,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11983,7 +11983,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -11994,7 +11994,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12005,7 +12005,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12016,7 +12016,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12027,7 +12027,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12038,7 +12038,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12049,7 +12049,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12060,7 +12060,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12071,7 +12071,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12082,7 +12082,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12093,7 +12093,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelInfGetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12109,7 +12109,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12130,7 +12130,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12151,7 +12151,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12172,7 +12172,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12193,7 +12193,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12214,7 +12214,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12235,7 +12235,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12256,7 +12256,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12277,7 +12277,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12298,7 +12298,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12319,7 +12319,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12340,7 +12340,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12361,7 +12361,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12382,7 +12382,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12403,7 +12403,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12424,7 +12424,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12447,7 +12447,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12472,7 +12472,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12497,7 +12497,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12522,7 +12522,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12548,7 +12548,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12575,7 +12575,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12602,7 +12602,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12629,7 +12629,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L1 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L1 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L1_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12648,7 +12648,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12659,7 +12659,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12670,7 +12670,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12681,7 +12681,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12692,7 +12692,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12703,7 +12703,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12714,7 +12714,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12725,7 +12725,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12736,7 +12736,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12747,7 +12747,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12758,7 +12758,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12769,7 +12769,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12780,7 +12780,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12791,7 +12791,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12802,7 +12802,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12813,7 +12813,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12824,7 +12824,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12835,7 +12835,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12846,7 +12846,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12857,7 +12857,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12868,7 +12868,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12879,7 +12879,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12890,7 +12890,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12901,7 +12901,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL1GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -12917,7 +12917,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12938,7 +12938,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12959,7 +12959,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12980,7 +12980,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13001,7 +13001,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13022,7 +13022,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13043,7 +13043,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13064,7 +13064,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13085,7 +13085,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13106,7 +13106,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13127,7 +13127,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13148,7 +13148,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13169,7 +13169,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13190,7 +13190,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13211,7 +13211,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13232,7 +13232,7 @@ namespace CSCuda.NPP
         /// <param name="aNormRel">Array that contains the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13255,7 +13255,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13280,7 +13280,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8s_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13305,7 +13305,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13330,7 +13330,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_C1MR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13356,7 +13356,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13383,7 +13383,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_8s_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13410,7 +13410,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_16u_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13437,7 +13437,7 @@ namespace CSCuda.NPP
         /// <param name="pNormRel">Pointer to the computed relative error for the L2 norm of two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, NPP_COI_ERROR if an invalid channel of interest is specified, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified, or NPP_DIVISOR_ERROR if the L2 norm of the second image is zero.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRel_L2_32f_C3CMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13456,7 +13456,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13467,7 +13467,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13478,7 +13478,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16s_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13489,7 +13489,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13500,7 +13500,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13511,7 +13511,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8s_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13522,7 +13522,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13533,7 +13533,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_C1MR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13544,7 +13544,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13555,7 +13555,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13566,7 +13566,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16s_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13577,7 +13577,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13588,7 +13588,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13599,7 +13599,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13610,7 +13610,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16s_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13621,7 +13621,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13632,7 +13632,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13643,7 +13643,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13654,7 +13654,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16s_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13665,7 +13665,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13676,7 +13676,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13687,7 +13687,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_8s_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13698,7 +13698,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_16u_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13709,7 +13709,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiNormRelL2GetBufferHostSize_32f_C3CMR(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -13725,7 +13725,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8u64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13746,7 +13746,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8s64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13767,7 +13767,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16u64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13788,7 +13788,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16s64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13809,7 +13809,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32u64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13830,7 +13830,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32s64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13851,7 +13851,7 @@ namespace CSCuda.NPP
         /// <param name="pDp">Pointer to the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32f64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13872,7 +13872,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8u64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13893,7 +13893,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8s64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13914,7 +13914,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16u64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13935,7 +13935,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16s64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13956,7 +13956,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32u64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13977,7 +13977,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32s64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13998,7 +13998,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32f64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14019,7 +14019,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8u64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14040,7 +14040,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8s64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14061,7 +14061,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16u64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14082,7 +14082,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16s64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14103,7 +14103,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32u64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14124,7 +14124,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32s64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14145,7 +14145,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32f64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14166,7 +14166,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8u64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14187,7 +14187,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_8s64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14208,7 +14208,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed Inf-norm of differences.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16u64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14229,7 +14229,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_16s64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14250,7 +14250,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32u64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14271,7 +14271,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32s64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14292,7 +14292,7 @@ namespace CSCuda.NPP
         /// <param name="aDp">Array that contains the computed dot product of the two images.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProd_32f64f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14308,7 +14308,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8u64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14319,7 +14319,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8s64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14330,7 +14330,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16u64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14341,7 +14341,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16s64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14352,7 +14352,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32u64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14363,7 +14363,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32s64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14374,7 +14374,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32f64f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14385,7 +14385,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8u64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14396,7 +14396,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8s64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14407,7 +14407,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16u64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14418,7 +14418,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16s64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14429,7 +14429,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32u64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14440,7 +14440,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32s64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14451,7 +14451,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32f64f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14462,7 +14462,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8u64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14473,7 +14473,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8s64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14484,7 +14484,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16u64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14495,7 +14495,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16s64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14506,7 +14506,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32u64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14517,7 +14517,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32s64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14528,7 +14528,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32f64f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14539,7 +14539,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8u64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14550,7 +14550,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_8s64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14561,7 +14561,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16u64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14572,7 +14572,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_16s64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14583,7 +14583,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32u64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14594,7 +14594,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32s64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14605,7 +14605,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiDotProdGetBufferHostSize_32f64f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14621,7 +14621,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperBound">Upper bound of the specified range.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14642,7 +14642,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperBound">Upper bound of the specified range.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14663,7 +14663,7 @@ namespace CSCuda.NPP
         /// <param name="aUpperBound">Fixed size array of the upper bound of the specified range, one per channel.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14684,7 +14684,7 @@ namespace CSCuda.NPP
         /// <param name="aUpperBound">Fixed size array of the upper bound of the specified range, one per channel.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14705,7 +14705,7 @@ namespace CSCuda.NPP
         /// <param name="aUpperBound">Fixed size array of the upper bound of the specified range, one per channel.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14726,7 +14726,7 @@ namespace CSCuda.NPP
         /// <param name="aUpperBound">Fixed size array of the upper bound of the specified range, one per channel.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_RANGE_ERROR if the lower bound is larger than the upper bound.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRange_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -14742,7 +14742,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_8u_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14753,7 +14753,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14764,7 +14764,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_8u_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14775,7 +14775,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14786,7 +14786,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_8u_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14797,7 +14797,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCountInRangeGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -14811,7 +14811,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14828,7 +14828,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14845,7 +14845,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16s_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14862,7 +14862,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14879,7 +14879,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14896,7 +14896,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14913,7 +14913,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16s_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14930,7 +14930,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14947,7 +14947,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14964,7 +14964,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14981,7 +14981,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16s_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14998,7 +14998,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15015,7 +15015,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15032,7 +15032,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15049,7 +15049,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_16s_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15066,7 +15066,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaxEvery_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15083,7 +15083,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15100,7 +15100,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15117,7 +15117,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16s_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15134,7 +15134,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15151,7 +15151,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15168,7 +15168,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15185,7 +15185,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16s_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15202,7 +15202,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15219,7 +15219,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15236,7 +15236,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15253,7 +15253,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16s_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15270,7 +15270,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15287,7 +15287,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15304,7 +15304,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15321,7 +15321,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_16s_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15338,7 +15338,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">source_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMinEvery_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15356,7 +15356,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="nVal">The value to add to pDst image pixels</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiIntegral_8u32s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15375,7 +15375,7 @@ namespace CSCuda.NPP
         /// <param name="oROI">roi_specification.</param>
         /// <param name="nVal">The value to add to pDst image pixels</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiIntegral_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15397,7 +15397,7 @@ namespace CSCuda.NPP
         /// <param name="nVal">The value to add to pDst image pixels</param>
         /// <param name="nValSqr">The value to add to pSqr image pixels</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrIntegral_8u32s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15422,7 +15422,7 @@ namespace CSCuda.NPP
         /// <param name="nVal">The value to add to pDst image pixels</param>
         /// <param name="nValSqr">The value to add to pSqr image pixels</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrIntegral_8u32s64f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15447,7 +15447,7 @@ namespace CSCuda.NPP
         /// <param name="nVal">The value to add to pDst image pixels</param>
         /// <param name="nValSqr">The value to add to pSqr image pixels</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrIntegral_8u32f64f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15471,7 +15471,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="oRect">rectangular window</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiRectStdDev_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15495,7 +15495,7 @@ namespace CSCuda.NPP
         /// <param name="oRect">rectangular window</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiRectStdDev_32s_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -15519,7 +15519,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="oRect">rectangular window</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiRectStdDev_32s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15538,7 +15538,7 @@ namespace CSCuda.NPP
         /// <param name="nLowerLevel">Lower boundary value of the lowest level.</param>
         /// <param name="nUpperLevel">Upper boundary value of the greatest level.</param>
         /// <returns>image_data_error_codes, or NPP_HISTO_NUMBER_OF_LEVELS_ERROR if an invalid nLevels is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiEvenLevelsHost_32s(
             IntPtr hpLevels,
             int nLevels,
@@ -15557,7 +15557,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Upper boundary of highest level bin.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15580,7 +15580,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15603,7 +15603,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15626,7 +15626,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15649,7 +15649,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Upper boundary of highest level bin.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15672,7 +15672,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15695,7 +15695,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15718,7 +15718,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15741,7 +15741,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Upper boundary of highest level bin.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15764,7 +15764,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15787,7 +15787,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15810,7 +15810,7 @@ namespace CSCuda.NPP
         /// <param name="nUpperLevel">Array containing upper-level of highest bin per color channel.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEven_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15832,7 +15832,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in histogram.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15853,7 +15853,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15874,7 +15874,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15895,7 +15895,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15916,7 +15916,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in histogram.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15937,7 +15937,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15958,7 +15958,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15979,7 +15979,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16000,7 +16000,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in histogram.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16021,7 +16021,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16042,7 +16042,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16063,7 +16063,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16084,7 +16084,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in histogram.</param>
         /// <param name="pBuffer">Pointer to appropriately sized (</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16105,7 +16105,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (nppiHistogramRangeGetBufferSize_32f_C3R) scratch buffer.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16126,7 +16126,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (nppiHistogramRangeGetBufferSize_32f_C4R) scratch buffer.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16147,7 +16147,7 @@ namespace CSCuda.NPP
         /// <param name="pLevels">Array containing pointers to level-arrays per color channel. Array pointed by pLevel[i] must be of size nLevels[i].</param>
         /// <param name="pBuffer">Pointer to appropriately sized (nppiHistogramRangeGetBufferSize_32f_AC4R) scratch buffer.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRange_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16164,7 +16164,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_8u_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16177,7 +16177,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_8u_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16190,7 +16190,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_8u_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16203,7 +16203,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_8u_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16216,7 +16216,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16u_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16229,7 +16229,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16u_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16242,7 +16242,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16u_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16255,7 +16255,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16u_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16268,7 +16268,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16s_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16281,7 +16281,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16s_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16294,7 +16294,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16s_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16307,7 +16307,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramEvenGetBufferSize_16s_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16320,7 +16320,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_8u_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16333,7 +16333,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_8u_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16346,7 +16346,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_8u_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16359,7 +16359,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_8u_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16372,7 +16372,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16u_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16385,7 +16385,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16u_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16398,7 +16398,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16u_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16411,7 +16411,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16u_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16424,7 +16424,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16s_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16437,7 +16437,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16s_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16450,7 +16450,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16s_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16463,7 +16463,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_16s_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16476,7 +16476,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Number of levels in the histogram.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_32f_C1R(
             NppiSize oSizeROI,
             int nLevels,
@@ -16489,7 +16489,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_32f_C3R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16502,7 +16502,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_32f_C4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]int[] nLevels,
@@ -16515,7 +16515,7 @@ namespace CSCuda.NPP
         /// <param name="nLevels">Array containing number of levels per color channel.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes..</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiHistogramRangeGetBufferSize_32f_AC4R(
             NppiSize oSizeROI,
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]int[] nLevels,
@@ -16534,7 +16534,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -16559,7 +16559,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -16584,7 +16584,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -16609,7 +16609,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -16633,7 +16633,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16656,7 +16656,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16679,7 +16679,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16702,7 +16702,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16725,7 +16725,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16748,7 +16748,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16771,7 +16771,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16794,7 +16794,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16817,7 +16817,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16840,7 +16840,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16863,7 +16863,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16886,7 +16886,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16909,7 +16909,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16932,7 +16932,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16955,7 +16955,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16978,7 +16978,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceFull_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17002,7 +17002,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17027,7 +17027,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17052,7 +17052,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17077,7 +17077,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17101,7 +17101,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17124,7 +17124,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17147,7 +17147,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17170,7 +17170,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17193,7 +17193,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17216,7 +17216,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17239,7 +17239,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17262,7 +17262,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17285,7 +17285,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17308,7 +17308,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17331,7 +17331,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17354,7 +17354,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17377,7 +17377,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17400,7 +17400,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17423,7 +17423,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17446,7 +17446,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceSame_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17470,7 +17470,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17495,7 +17495,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17520,7 +17520,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17545,7 +17545,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17569,7 +17569,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17592,7 +17592,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17615,7 +17615,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17638,7 +17638,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17661,7 +17661,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17684,7 +17684,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17707,7 +17707,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17730,7 +17730,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17753,7 +17753,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17776,7 +17776,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17799,7 +17799,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17822,7 +17822,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17845,7 +17845,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17868,7 +17868,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17891,7 +17891,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17914,7 +17914,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSqrDistanceValid_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -17938,7 +17938,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17963,7 +17963,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -17988,7 +17988,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18013,7 +18013,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18037,7 +18037,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18060,7 +18060,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18083,7 +18083,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18106,7 +18106,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18129,7 +18129,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18152,7 +18152,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18175,7 +18175,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18198,7 +18198,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18221,7 +18221,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18244,7 +18244,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18267,7 +18267,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18290,7 +18290,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18313,7 +18313,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18336,7 +18336,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18359,7 +18359,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18382,7 +18382,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18406,7 +18406,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18431,7 +18431,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18456,7 +18456,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18481,7 +18481,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18505,7 +18505,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18528,7 +18528,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18551,7 +18551,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18574,7 +18574,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18597,7 +18597,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18620,7 +18620,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18643,7 +18643,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18666,7 +18666,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18689,7 +18689,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18712,7 +18712,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18735,7 +18735,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18758,7 +18758,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18781,7 +18781,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18804,7 +18804,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18827,7 +18827,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18850,7 +18850,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18874,7 +18874,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18899,7 +18899,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18924,7 +18924,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18949,7 +18949,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -18973,7 +18973,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -18996,7 +18996,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19019,7 +19019,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19042,7 +19042,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19065,7 +19065,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19088,7 +19088,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19111,7 +19111,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19134,7 +19134,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19157,7 +19157,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19180,7 +19180,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19203,7 +19203,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19226,7 +19226,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19249,7 +19249,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19272,7 +19272,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19295,7 +19295,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19318,7 +19318,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_Norm_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19341,7 +19341,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19364,7 +19364,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19387,7 +19387,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19410,7 +19410,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">destination_image_pointer.</param>
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19435,7 +19435,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -19462,7 +19462,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -19489,7 +19489,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -19516,7 +19516,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -19542,7 +19542,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19567,7 +19567,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19592,7 +19592,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19617,7 +19617,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19642,7 +19642,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19667,7 +19667,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19692,7 +19692,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19717,7 +19717,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19742,7 +19742,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19767,7 +19767,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19792,7 +19792,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19817,7 +19817,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19842,7 +19842,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19867,7 +19867,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19892,7 +19892,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19917,7 +19917,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrFull_NormLevel_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -19935,7 +19935,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u_C1RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -19946,7 +19946,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u_C3RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -19957,7 +19957,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u_C4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -19968,7 +19968,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u_AC4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -19979,7 +19979,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -19990,7 +19990,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20001,7 +20001,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20012,7 +20012,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20023,7 +20023,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20034,7 +20034,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20045,7 +20045,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20056,7 +20056,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20067,7 +20067,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8s32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20078,7 +20078,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8s32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20089,7 +20089,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8s32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20100,7 +20100,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_8s32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20111,7 +20111,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_16u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20122,7 +20122,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_16u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20133,7 +20133,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_16u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20144,7 +20144,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiFullNormLevelGetBufferHostSize_16u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20163,7 +20163,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20190,7 +20190,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20217,7 +20217,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20244,7 +20244,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20270,7 +20270,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20295,7 +20295,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20320,7 +20320,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20345,7 +20345,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20370,7 +20370,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20395,7 +20395,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20420,7 +20420,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20445,7 +20445,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20470,7 +20470,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20495,7 +20495,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20520,7 +20520,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20545,7 +20545,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20570,7 +20570,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20595,7 +20595,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20620,7 +20620,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20645,7 +20645,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrSame_NormLevel_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -20663,7 +20663,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u_C1RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20674,7 +20674,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u_C3RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20685,7 +20685,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u_C4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20696,7 +20696,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u_AC4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20707,7 +20707,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20718,7 +20718,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20729,7 +20729,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20740,7 +20740,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20751,7 +20751,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20762,7 +20762,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20773,7 +20773,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20784,7 +20784,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20795,7 +20795,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8s32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20806,7 +20806,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8s32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20817,7 +20817,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8s32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20828,7 +20828,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_8s32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20839,7 +20839,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_16u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20850,7 +20850,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_16u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20861,7 +20861,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_16u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20872,7 +20872,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiSameNormLevelGetBufferHostSize_16u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -20891,7 +20891,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20918,7 +20918,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20945,7 +20945,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20972,7 +20972,7 @@ namespace CSCuda.NPP
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -20998,7 +20998,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21023,7 +21023,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21048,7 +21048,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21073,7 +21073,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21098,7 +21098,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21123,7 +21123,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21148,7 +21148,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21173,7 +21173,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21198,7 +21198,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8s32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21223,7 +21223,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8s32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21248,7 +21248,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8s32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21273,7 +21273,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_8s32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21298,7 +21298,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_16u32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21323,7 +21323,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_16u32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21348,7 +21348,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_16u32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21373,7 +21373,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiCrossCorrValid_NormLevel_16u32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -21391,7 +21391,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u_C1RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21402,7 +21402,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u_C3RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21413,7 +21413,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u_C4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21424,7 +21424,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u_AC4RSfs(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21435,7 +21435,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21446,7 +21446,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21457,7 +21457,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21468,7 +21468,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21479,7 +21479,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21490,7 +21490,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21501,7 +21501,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21512,7 +21512,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21523,7 +21523,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8s32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21534,7 +21534,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8s32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21545,7 +21545,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8s32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21556,7 +21556,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_8s32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21567,7 +21567,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_16u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21578,7 +21578,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_16u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21589,7 +21589,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_16u32f_C4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21600,7 +21600,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiValidNormLevelGetBufferHostSize_16u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21616,7 +21616,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_8u32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21637,7 +21637,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_16u32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21658,7 +21658,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21679,7 +21679,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_8u32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21700,7 +21700,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_16u32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21721,7 +21721,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21742,7 +21742,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_8u32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21763,7 +21763,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_16u32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21784,7 +21784,7 @@ namespace CSCuda.NPP
         /// <param name="pDst">Pointer to the quality index.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_QUALITY_INDEX_ERROR if pixels of either image are constant numberse.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndex_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21800,7 +21800,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_8u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21811,7 +21811,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_16u32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21822,7 +21822,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_32f_C1R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21833,7 +21833,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_8u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21844,7 +21844,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_16u32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21855,7 +21855,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_32f_C3R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21866,7 +21866,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_8u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21877,7 +21877,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_16u32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21888,7 +21888,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="hpBufferSize">Required buffer size. Important: hpBufferSize is a</param>
         /// <returns>NPP_NULL_POINTER_ERROR if hpBufferSize is 0 (NULL), roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiQualityIndexGetBufferHostSize_32f_AC4R(
             NppiSize oSizeROI,
             IntPtr hpBufferSize);
@@ -21904,7 +21904,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21925,7 +21925,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21946,7 +21946,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21967,7 +21967,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -21988,7 +21988,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22009,7 +22009,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22030,7 +22030,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22051,7 +22051,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22072,7 +22072,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22093,7 +22093,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22114,7 +22114,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22135,7 +22135,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22156,7 +22156,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22177,7 +22177,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22198,7 +22198,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22219,7 +22219,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22240,7 +22240,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22261,7 +22261,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22282,7 +22282,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22303,7 +22303,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22324,7 +22324,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32fc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22345,7 +22345,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_64f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22366,7 +22366,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22387,7 +22387,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22408,7 +22408,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22429,7 +22429,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22450,7 +22450,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22471,7 +22471,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22492,7 +22492,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22513,7 +22513,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22534,7 +22534,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22555,7 +22555,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22576,7 +22576,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22597,7 +22597,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22618,7 +22618,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_8s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22639,7 +22639,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22660,7 +22660,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22681,7 +22681,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_16sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22702,7 +22702,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22723,7 +22723,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22744,7 +22744,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22765,7 +22765,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22786,7 +22786,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22807,7 +22807,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumError_64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22828,7 +22828,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22849,7 +22849,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22870,7 +22870,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22891,7 +22891,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22912,7 +22912,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22933,7 +22933,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22954,7 +22954,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22975,7 +22975,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -22996,7 +22996,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23017,7 +23017,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23038,7 +23038,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23059,7 +23059,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23080,7 +23080,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23101,7 +23101,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23122,7 +23122,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23143,7 +23143,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23164,7 +23164,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23185,7 +23185,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23206,7 +23206,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23227,7 +23227,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23248,7 +23248,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32fc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23269,7 +23269,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_64f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23290,7 +23290,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23311,7 +23311,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23332,7 +23332,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23353,7 +23353,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23374,7 +23374,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23395,7 +23395,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23416,7 +23416,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23437,7 +23437,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23458,7 +23458,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23479,7 +23479,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23500,7 +23500,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23521,7 +23521,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23542,7 +23542,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_8s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23563,7 +23563,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23584,7 +23584,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23605,7 +23605,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_16sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23626,7 +23626,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23647,7 +23647,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23668,7 +23668,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23689,7 +23689,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23710,7 +23710,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23731,7 +23731,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageError_64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23752,7 +23752,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23773,7 +23773,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23794,7 +23794,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23815,7 +23815,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23836,7 +23836,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23857,7 +23857,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23878,7 +23878,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23899,7 +23899,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23920,7 +23920,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23941,7 +23941,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23962,7 +23962,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -23983,7 +23983,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24004,7 +24004,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24025,7 +24025,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24046,7 +24046,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24067,7 +24067,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24088,7 +24088,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24109,7 +24109,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24130,7 +24130,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24151,7 +24151,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24172,7 +24172,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32fc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24193,7 +24193,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_64f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24214,7 +24214,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24235,7 +24235,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24256,7 +24256,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24277,7 +24277,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24298,7 +24298,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24319,7 +24319,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24340,7 +24340,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24361,7 +24361,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24382,7 +24382,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24403,7 +24403,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24424,7 +24424,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24445,7 +24445,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24466,7 +24466,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_8s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24487,7 +24487,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24508,7 +24508,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24529,7 +24529,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_16sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24550,7 +24550,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24571,7 +24571,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24592,7 +24592,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24613,7 +24613,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24634,7 +24634,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24655,7 +24655,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiMaximumRelativeError_64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24676,7 +24676,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24697,7 +24697,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24718,7 +24718,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24739,7 +24739,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24760,7 +24760,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24781,7 +24781,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24802,7 +24802,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24823,7 +24823,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32sc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24844,7 +24844,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24865,7 +24865,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24886,7 +24886,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_64f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24907,7 +24907,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24928,7 +24928,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24949,7 +24949,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24970,7 +24970,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -24991,7 +24991,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25012,7 +25012,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32u_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25033,7 +25033,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32s_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25054,7 +25054,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32sc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25075,7 +25075,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25096,7 +25096,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32fc_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25117,7 +25117,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_64f_C2R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25138,7 +25138,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25159,7 +25159,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25180,7 +25180,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25201,7 +25201,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25222,7 +25222,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25243,7 +25243,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25264,7 +25264,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25285,7 +25285,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32sc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25306,7 +25306,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25327,7 +25327,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25348,7 +25348,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_64f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25369,7 +25369,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25390,7 +25390,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_8s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25411,7 +25411,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25432,7 +25432,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25453,7 +25453,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_16sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25474,7 +25474,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25495,7 +25495,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25516,7 +25516,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32sc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25537,7 +25537,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25558,7 +25558,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error (absolute value).</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -25579,7 +25579,7 @@ namespace CSCuda.NPP
         /// <param name="pError">Pointer to the computed error.</param>
         /// <param name="pDeviceBuffer">Pointer to the required device memory allocation, general_scratch_buffer. Use</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_EVEN_STEP_ERROR if an invalid floating-point image is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(stDll, SetLastError = true)]
         public static extern NppStatus nppiAverageRelativeError_64f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,

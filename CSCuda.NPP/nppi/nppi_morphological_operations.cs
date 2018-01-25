@@ -31,7 +31,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -54,7 +54,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -77,7 +77,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -100,7 +100,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -123,7 +123,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -146,7 +146,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -169,7 +169,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -192,7 +192,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -215,7 +215,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -238,7 +238,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -261,7 +261,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -284,7 +284,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -310,7 +310,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -339,7 +339,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -368,7 +368,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -397,7 +397,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -426,7 +426,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -455,7 +455,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -484,7 +484,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -513,7 +513,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -542,7 +542,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -571,7 +571,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -600,7 +600,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -629,7 +629,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilateBorder_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -652,7 +652,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -669,7 +669,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -686,7 +686,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -703,7 +703,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -720,7 +720,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -737,7 +737,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -754,7 +754,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -771,7 +771,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -788,7 +788,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -805,7 +805,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -822,7 +822,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -839,7 +839,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -856,7 +856,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3_64f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -876,7 +876,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -899,7 +899,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -922,7 +922,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -945,7 +945,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -968,7 +968,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -991,7 +991,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1014,7 +1014,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1037,7 +1037,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1060,7 +1060,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1083,7 +1083,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1106,7 +1106,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1129,7 +1129,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiDilate3x3Border_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1152,7 +1152,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1175,7 +1175,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1198,7 +1198,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1221,7 +1221,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1244,7 +1244,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1267,7 +1267,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1290,7 +1290,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1313,7 +1313,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1336,7 +1336,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1359,7 +1359,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1382,7 +1382,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1405,7 +1405,7 @@ namespace CSCuda.NPP
         /// <param name="oMaskSize">Width and Height mask array.</param>
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1431,7 +1431,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1460,7 +1460,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1489,7 +1489,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1518,7 +1518,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1547,7 +1547,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1576,7 +1576,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1605,7 +1605,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1634,7 +1634,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1663,7 +1663,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1692,7 +1692,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1721,7 +1721,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1750,7 +1750,7 @@ namespace CSCuda.NPP
         /// <param name="oAnchor">X and Y offsets of the mask origin frame of reference w.r.t the source pixel.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErodeBorder_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1773,7 +1773,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1790,7 +1790,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1807,7 +1807,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1824,7 +1824,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1841,7 +1841,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1858,7 +1858,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1875,7 +1875,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1892,7 +1892,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1909,7 +1909,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1926,7 +1926,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1943,7 +1943,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1960,7 +1960,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1977,7 +1977,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3_64f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -1997,7 +1997,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_8u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2020,7 +2020,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_8u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2043,7 +2043,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2066,7 +2066,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2089,7 +2089,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_16u_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2112,7 +2112,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_16u_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2135,7 +2135,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2158,7 +2158,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2181,7 +2181,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_32f_C1R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2204,7 +2204,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_32f_C3R(
             IntPtr pSrc,
             Npp32s nSrcStep,
@@ -2227,7 +2227,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2250,7 +2250,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eBorderType">The border type operation to be applied at source image border boundaries.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(mDll, SetLastError = true)]
         public static extern NppStatus nppiErode3x3Border_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,

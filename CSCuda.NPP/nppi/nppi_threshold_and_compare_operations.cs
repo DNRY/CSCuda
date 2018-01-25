@@ -30,7 +30,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -49,7 +49,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -68,7 +68,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -87,7 +87,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -106,7 +106,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -125,7 +125,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -144,7 +144,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -163,7 +163,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -182,7 +182,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -201,7 +201,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -220,7 +220,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -239,7 +239,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -258,7 +258,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -277,7 +277,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -296,7 +296,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -315,7 +315,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -334,7 +334,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -353,7 +353,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -372,7 +372,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -391,7 +391,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -410,7 +410,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -429,7 +429,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -448,7 +448,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -467,7 +467,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -485,7 +485,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -502,7 +502,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -519,7 +519,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -536,7 +536,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -553,7 +553,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -570,7 +570,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -587,7 +587,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -604,7 +604,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -621,7 +621,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -638,7 +638,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -655,7 +655,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -672,7 +672,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -689,7 +689,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -706,7 +706,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -723,7 +723,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -740,7 +740,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -757,7 +757,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -774,7 +774,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -791,7 +791,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -808,7 +808,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -825,7 +825,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -842,7 +842,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -859,7 +859,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -876,7 +876,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GT_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -893,7 +893,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -910,7 +910,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -927,7 +927,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -944,7 +944,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -961,7 +961,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -978,7 +978,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -995,7 +995,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1012,7 +1012,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nThreshold">The threshold value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1029,7 +1029,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1046,7 +1046,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1063,7 +1063,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1080,7 +1080,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1097,7 +1097,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1114,7 +1114,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1131,7 +1131,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1148,7 +1148,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1165,7 +1165,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1182,7 +1182,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1199,7 +1199,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1216,7 +1216,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1233,7 +1233,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1250,7 +1250,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1267,7 +1267,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1284,7 +1284,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LT_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1303,7 +1303,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1324,7 +1324,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1345,7 +1345,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1366,7 +1366,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1387,7 +1387,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1408,7 +1408,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1429,7 +1429,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1450,7 +1450,7 @@ namespace CSCuda.NPP
         /// <param name="nValue">The threshold replacement value.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1471,7 +1471,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1492,7 +1492,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1513,7 +1513,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1534,7 +1534,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1555,7 +1555,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1576,7 +1576,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1597,7 +1597,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1618,7 +1618,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1639,7 +1639,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1660,7 +1660,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1681,7 +1681,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1702,7 +1702,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1723,7 +1723,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1744,7 +1744,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1765,7 +1765,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1786,7 +1786,7 @@ namespace CSCuda.NPP
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <param name="eComparisonOperation">The type of comparison operation to be used. The only valid values are: NPP_CMP_LESS and NPP_CMP_GREATER.</param>
         /// <returns>image_data_error_codes, roi_error_codes, or NPP_NOT_SUPPORTED_MODE_ERROR if an invalid comparison operation type is specified.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_Val_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1806,7 +1806,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1825,7 +1825,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1844,7 +1844,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1863,7 +1863,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1882,7 +1882,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1901,7 +1901,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1920,7 +1920,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1939,7 +1939,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement values.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1958,7 +1958,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -1977,7 +1977,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -1996,7 +1996,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2015,7 +2015,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2034,7 +2034,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2053,7 +2053,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2072,7 +2072,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2091,7 +2091,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2110,7 +2110,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2129,7 +2129,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2148,7 +2148,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2167,7 +2167,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2186,7 +2186,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2205,7 +2205,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2224,7 +2224,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2243,7 +2243,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_GTVal_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2262,7 +2262,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2281,7 +2281,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2300,7 +2300,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2319,7 +2319,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2338,7 +2338,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2357,7 +2357,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2376,7 +2376,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2395,7 +2395,7 @@ namespace CSCuda.NPP
         /// <param name="nThreshold">The threshold value.</param>
         /// <param name="nValue">The threshold replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2414,7 +2414,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2433,7 +2433,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2452,7 +2452,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2471,7 +2471,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2490,7 +2490,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2509,7 +2509,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2528,7 +2528,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2547,7 +2547,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2566,7 +2566,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2585,7 +2585,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2604,7 +2604,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2623,7 +2623,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2642,7 +2642,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2661,7 +2661,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2680,7 +2680,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2699,7 +2699,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholds">The threshold values, one per color channel.</param>
         /// <param name="rValues">The threshold replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTVal_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2720,7 +2720,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2743,7 +2743,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2766,7 +2766,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2789,7 +2789,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2812,7 +2812,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2835,7 +2835,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2858,7 +2858,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2881,7 +2881,7 @@ namespace CSCuda.NPP
         /// <param name="nThresholdGT">The thresholdGT value.</param>
         /// <param name="nValueGT">The thresholdGT replacement value.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2904,7 +2904,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2927,7 +2927,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2950,7 +2950,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -2973,7 +2973,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -2996,7 +2996,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3019,7 +3019,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3042,7 +3042,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3065,7 +3065,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3088,7 +3088,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3111,7 +3111,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3134,7 +3134,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3157,7 +3157,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3180,7 +3180,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3203,7 +3203,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3226,7 +3226,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3249,7 +3249,7 @@ namespace CSCuda.NPP
         /// <param name="rThresholdsGT">The thresholdGT values, one per channel.</param>
         /// <param name="rValuesGT">The thresholdGT replacement values, one per color channel.</param>
         /// <returns>image_data_error_codes, roi_error_codes.</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiThreshold_LTValGTVal_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -3271,7 +3271,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3294,7 +3294,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3317,7 +3317,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3340,7 +3340,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3363,7 +3363,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3386,7 +3386,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3409,7 +3409,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3432,7 +3432,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3455,7 +3455,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3478,7 +3478,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3501,7 +3501,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3524,7 +3524,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3547,7 +3547,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3570,7 +3570,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3593,7 +3593,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3616,7 +3616,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompare_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3638,7 +3638,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3659,7 +3659,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3680,7 +3680,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3701,7 +3701,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3722,7 +3722,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3743,7 +3743,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3764,7 +3764,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3785,7 +3785,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3806,7 +3806,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3827,7 +3827,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3848,7 +3848,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3869,7 +3869,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3890,7 +3890,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3911,7 +3911,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3932,7 +3932,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3953,7 +3953,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eComparisonOperation">Specifies the comparison operation to be used in the pixel comparison.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareC_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -3975,7 +3975,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEps_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3998,7 +3998,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEps_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4021,7 +4021,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEps_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4044,7 +4044,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEps_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4066,7 +4066,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEpsC_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4087,7 +4087,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEpsC_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4108,7 +4108,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEpsC_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -4129,7 +4129,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nEpsilon">epsilon tolerance value to compare to per color channel pixel absolute differences</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(tcDll, SetLastError = true)]
         public static extern NppStatus nppiCompareEqualEpsC_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,

@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSCuda
-{
+{   
     public static class CudaRuntimeApi
     {
-        private const string cudartString = @"cudart64_80";
+        private const string cudartString = @"cudart" + Constants.platform + "_" + Constants.version;
 
         [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern cudaError cudaDeviceReset();

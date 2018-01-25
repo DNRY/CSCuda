@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using CSCuda;
 
 /**
  * \file nppcore.h
@@ -16,7 +17,7 @@ namespace CSCuda.NPP
     /// </summary>
     public static class NppCore
     {
-        private const string dllFileName = @"nppc64_80.dll";
+        private const string dllFileName = @"nppc" + Constants.platform + "_" + Constants.version;  
 
         /// <summary>
         /// Get the NPP library version.

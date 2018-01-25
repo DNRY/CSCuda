@@ -4,7 +4,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+
+using CSCuda;
 using cuComplex = CSCuda.float2;
+
 
 namespace CSCuda.CUBLAS
 {
@@ -31,7 +34,7 @@ namespace CSCuda.CUBLAS
 
     public static class Cublas_api
     {
-        internal const string dllName = @"cublas64_80.dll";
+        internal const string dllName = @"cublas" + Constants.platform + "_" + Constants.version;
 
         [DllImport(dllName, CallingConvention = CallingConvention.Cdecl)]
         public static extern cublasStatus_t cublasCreate_v2(ref IntPtr handle);

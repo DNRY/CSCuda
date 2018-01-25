@@ -18,7 +18,7 @@ using Npp64f = System.Double;
 namespace CSCuda.NPP
 {
     public partial class Nppi
-    {
+    {   
         /// <summary>
         /// One 8-bit unsigned char channel image add constant, scale, then clamp to saturated value.
         /// </summary>
@@ -30,7 +30,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -49,7 +49,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C1IRSfs(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -68,7 +68,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -87,7 +87,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -106,7 +106,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -125,7 +125,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -144,7 +144,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -163,7 +163,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_8u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -182,7 +182,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -201,7 +201,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C1IRSfs(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -220,7 +220,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -239,7 +239,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -258,7 +258,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -277,7 +277,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -296,7 +296,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -315,7 +315,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -334,7 +334,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -353,7 +353,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C1IRSfs(
             Npp16s nConstant,
             IntPtr pSrcDst,
@@ -372,7 +372,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -391,7 +391,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -410,7 +410,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -429,7 +429,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -448,7 +448,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -467,7 +467,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16s_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -486,7 +486,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -505,7 +505,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_C1IRSfs(
             Npp16sc nConstant,
             IntPtr pSrcDst,
@@ -524,7 +524,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -543,7 +543,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -562,7 +562,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -581,7 +581,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_16sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -600,7 +600,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -619,7 +619,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32s_C1IRSfs(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -638,7 +638,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -657,7 +657,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -676,7 +676,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -695,7 +695,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_C1IRSfs(
             Npp32sc nConstant,
             IntPtr pSrcDst,
@@ -714,7 +714,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -733,7 +733,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -752,7 +752,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -771,7 +771,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -789,7 +789,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -806,7 +806,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C1IR(
             Npp32f nConstant,
             IntPtr pSrcDst,
@@ -823,7 +823,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -840,7 +840,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -857,7 +857,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -874,7 +874,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -891,7 +891,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -908,7 +908,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32f_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -925,7 +925,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -942,7 +942,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C1IR(
             Npp32fc nConstant,
             IntPtr pSrcDst,
@@ -959,7 +959,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -976,7 +976,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -993,7 +993,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1010,7 +1010,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -1027,7 +1027,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1044,7 +1044,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddC_32fc_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -1062,7 +1062,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1081,7 +1081,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C1IRSfs(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -1100,7 +1100,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1119,7 +1119,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -1138,7 +1138,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1157,7 +1157,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -1176,7 +1176,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1195,7 +1195,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_8u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -1214,7 +1214,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1233,7 +1233,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C1IRSfs(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -1252,7 +1252,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1271,7 +1271,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -1290,7 +1290,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1309,7 +1309,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -1328,7 +1328,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1347,7 +1347,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -1366,7 +1366,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1385,7 +1385,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C1IRSfs(
             Npp16s nConstant,
             IntPtr pSrcDst,
@@ -1404,7 +1404,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1423,7 +1423,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -1442,7 +1442,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1461,7 +1461,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -1480,7 +1480,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1499,7 +1499,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16s_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -1518,7 +1518,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1537,7 +1537,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_C1IRSfs(
             Npp16sc nConstant,
             IntPtr pSrcDst,
@@ -1556,7 +1556,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1575,7 +1575,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -1594,7 +1594,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1613,7 +1613,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_16sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -1632,7 +1632,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1651,7 +1651,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32s_C1IRSfs(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -1670,7 +1670,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1689,7 +1689,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -1708,7 +1708,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1727,7 +1727,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_C1IRSfs(
             Npp32sc nConstant,
             IntPtr pSrcDst,
@@ -1746,7 +1746,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1765,7 +1765,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -1784,7 +1784,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1803,7 +1803,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -1821,7 +1821,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1838,7 +1838,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C1IR(
             Npp32f nConstant,
             IntPtr pSrcDst,
@@ -1855,7 +1855,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1872,7 +1872,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -1889,7 +1889,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1906,7 +1906,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -1923,7 +1923,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1940,7 +1940,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32f_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -1957,7 +1957,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -1974,7 +1974,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C1IR(
             Npp32fc nConstant,
             IntPtr pSrcDst,
@@ -1991,7 +1991,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2008,7 +2008,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -2025,7 +2025,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2042,7 +2042,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -2059,7 +2059,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2076,7 +2076,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulC_32fc_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -2093,7 +2093,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2110,7 +2110,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C1IR(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -2127,7 +2127,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2144,7 +2144,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2161,7 +2161,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2178,7 +2178,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2195,7 +2195,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2212,7 +2212,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2229,7 +2229,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2246,7 +2246,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C1IR(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -2263,7 +2263,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2280,7 +2280,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2297,7 +2297,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2314,7 +2314,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2331,7 +2331,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2348,7 +2348,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulCScale_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2366,7 +2366,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2385,7 +2385,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C1IRSfs(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -2404,7 +2404,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2423,7 +2423,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2442,7 +2442,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2461,7 +2461,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2480,7 +2480,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2499,7 +2499,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_8u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -2518,7 +2518,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2537,7 +2537,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C1IRSfs(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -2556,7 +2556,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2575,7 +2575,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2594,7 +2594,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2613,7 +2613,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2632,7 +2632,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2651,7 +2651,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -2670,7 +2670,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2689,7 +2689,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C1IRSfs(
             Npp16s nConstant,
             IntPtr pSrcDst,
@@ -2708,7 +2708,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2727,7 +2727,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -2746,7 +2746,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2765,7 +2765,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -2784,7 +2784,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2803,7 +2803,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16s_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -2822,7 +2822,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2841,7 +2841,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_C1IRSfs(
             Npp16sc nConstant,
             IntPtr pSrcDst,
@@ -2860,7 +2860,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2879,7 +2879,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -2898,7 +2898,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2917,7 +2917,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_16sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -2936,7 +2936,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2955,7 +2955,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32s_C1IRSfs(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -2974,7 +2974,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -2993,7 +2993,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -3012,7 +3012,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3031,7 +3031,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_C1IRSfs(
             Npp32sc nConstant,
             IntPtr pSrcDst,
@@ -3050,7 +3050,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3069,7 +3069,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -3088,7 +3088,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3107,7 +3107,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -3125,7 +3125,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3142,7 +3142,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C1IR(
             Npp32f nConstant,
             IntPtr pSrcDst,
@@ -3159,7 +3159,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3176,7 +3176,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -3193,7 +3193,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3210,7 +3210,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -3227,7 +3227,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3244,7 +3244,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32f_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -3261,7 +3261,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3278,7 +3278,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C1IR(
             Npp32fc nConstant,
             IntPtr pSrcDst,
@@ -3295,7 +3295,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3312,7 +3312,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -3329,7 +3329,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3346,7 +3346,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -3363,7 +3363,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3380,7 +3380,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSubC_32fc_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -3398,7 +3398,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3417,7 +3417,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C1IRSfs(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -3436,7 +3436,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3455,7 +3455,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -3474,7 +3474,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3493,7 +3493,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -3512,7 +3512,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3531,7 +3531,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_8u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -3550,7 +3550,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3569,7 +3569,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C1IRSfs(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -3588,7 +3588,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3607,7 +3607,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -3626,7 +3626,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3645,7 +3645,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -3664,7 +3664,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3683,7 +3683,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16u_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -3702,7 +3702,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3721,7 +3721,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C1IRSfs(
             Npp16s nConstant,
             IntPtr pSrcDst,
@@ -3740,7 +3740,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3759,7 +3759,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -3778,7 +3778,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3797,7 +3797,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -3816,7 +3816,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3835,7 +3835,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16s_C4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16s[] aConstants,
             IntPtr pSrcDst,
@@ -3854,7 +3854,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3873,7 +3873,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_C1IRSfs(
             Npp16sc nConstant,
             IntPtr pSrcDst,
@@ -3892,7 +3892,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3911,7 +3911,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -3930,7 +3930,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3949,7 +3949,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_16sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16sc[] aConstants,
             IntPtr pSrcDst,
@@ -3968,7 +3968,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -3987,7 +3987,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32s_C1IRSfs(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -4006,7 +4006,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4025,7 +4025,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32s_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -4044,7 +4044,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4063,7 +4063,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_C1IRSfs(
             Npp32sc nConstant,
             IntPtr pSrcDst,
@@ -4082,7 +4082,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4101,7 +4101,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_C3IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -4120,7 +4120,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4139,7 +4139,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32sc_AC4IRSfs(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32sc[] aConstants,
             IntPtr pSrcDst,
@@ -4157,7 +4157,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4174,7 +4174,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C1IR(
             Npp32f nConstant,
             IntPtr pSrcDst,
@@ -4191,7 +4191,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4208,7 +4208,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -4225,7 +4225,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4242,7 +4242,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -4259,7 +4259,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4276,7 +4276,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32f_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32f[] aConstants,
             IntPtr pSrcDst,
@@ -4293,7 +4293,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4310,7 +4310,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C1IR(
             Npp32fc nConstant,
             IntPtr pSrcDst,
@@ -4327,7 +4327,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4344,7 +4344,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -4361,7 +4361,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4378,7 +4378,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -4395,7 +4395,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4412,7 +4412,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDivC_32fc_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32fc[] aConstants,
             IntPtr pSrcDst,
@@ -4429,7 +4429,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiffC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4448,7 +4448,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiffC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4467,7 +4467,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiffC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4488,7 +4488,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4509,7 +4509,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4530,7 +4530,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4551,7 +4551,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4572,7 +4572,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4593,7 +4593,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4614,7 +4614,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4635,7 +4635,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_8u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4656,7 +4656,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4677,7 +4677,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4698,7 +4698,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4719,7 +4719,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4740,7 +4740,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4761,7 +4761,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4782,7 +4782,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4803,7 +4803,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4824,7 +4824,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4845,7 +4845,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4866,7 +4866,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4887,7 +4887,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4908,7 +4908,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4929,7 +4929,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4950,7 +4950,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -4971,7 +4971,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -4992,7 +4992,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5013,7 +5013,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5034,7 +5034,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5055,7 +5055,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5076,7 +5076,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5097,7 +5097,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_16sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5118,7 +5118,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5140,7 +5140,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5160,7 +5160,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5181,7 +5181,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5202,7 +5202,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5223,7 +5223,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5244,7 +5244,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5265,7 +5265,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5286,7 +5286,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5307,7 +5307,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5328,7 +5328,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -5348,7 +5348,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5367,7 +5367,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5386,7 +5386,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5405,7 +5405,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5424,7 +5424,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5443,7 +5443,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5462,7 +5462,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5481,7 +5481,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5500,7 +5500,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5519,7 +5519,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5538,7 +5538,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5557,7 +5557,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5576,7 +5576,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5595,7 +5595,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5614,7 +5614,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5633,7 +5633,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAdd_32fc_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5652,7 +5652,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_8u32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5671,7 +5671,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_8u32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5690,7 +5690,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_16u32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5709,7 +5709,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_16u32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5728,7 +5728,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5747,7 +5747,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddSquare_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5768,7 +5768,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_8u32f_C1IMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5791,7 +5791,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_8u32f_C1IR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5814,7 +5814,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_16u32f_C1IMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5837,7 +5837,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_16u32f_C1IR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5860,7 +5860,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_32f_C1IMR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5883,7 +5883,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddProduct_32f_C1IR(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -5905,7 +5905,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_8u32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5926,7 +5926,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_8u32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5947,7 +5947,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_16u32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5968,7 +5968,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_16u32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -5989,7 +5989,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_32f_C1IMR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6010,7 +6010,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nAlpha">Alpha weight to be applied to source image pixels (0.0F to 1.0F)</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAddWeighted_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6031,7 +6031,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6052,7 +6052,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6073,7 +6073,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6094,7 +6094,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6115,7 +6115,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6136,7 +6136,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6157,7 +6157,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6178,7 +6178,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_8u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6199,7 +6199,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6220,7 +6220,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6241,7 +6241,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6262,7 +6262,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6283,7 +6283,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6304,7 +6304,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6325,7 +6325,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6346,7 +6346,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6367,7 +6367,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6388,7 +6388,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6409,7 +6409,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6430,7 +6430,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6451,7 +6451,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6472,7 +6472,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6493,7 +6493,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6514,7 +6514,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6535,7 +6535,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6556,7 +6556,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6577,7 +6577,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6598,7 +6598,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6619,7 +6619,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6640,7 +6640,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_16sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6661,7 +6661,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6683,7 +6683,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6703,7 +6703,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6724,7 +6724,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6745,7 +6745,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6766,7 +6766,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6787,7 +6787,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6808,7 +6808,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6829,7 +6829,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6850,7 +6850,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6871,7 +6871,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -6891,7 +6891,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6910,7 +6910,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6929,7 +6929,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6948,7 +6948,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -6967,7 +6967,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -6986,7 +6986,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7005,7 +7005,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7024,7 +7024,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7043,7 +7043,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7062,7 +7062,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7081,7 +7081,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7100,7 +7100,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7119,7 +7119,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7138,7 +7138,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7157,7 +7157,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7176,7 +7176,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMul_32fc_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7195,7 +7195,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7214,7 +7214,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7233,7 +7233,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7252,7 +7252,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7271,7 +7271,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7290,7 +7290,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7309,7 +7309,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7328,7 +7328,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7347,7 +7347,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7366,7 +7366,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7385,7 +7385,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7404,7 +7404,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7423,7 +7423,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7442,7 +7442,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7461,7 +7461,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7480,7 +7480,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiMulScale_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -7500,7 +7500,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7521,7 +7521,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7542,7 +7542,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7563,7 +7563,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7584,7 +7584,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7605,7 +7605,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7626,7 +7626,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7647,7 +7647,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_8u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7668,7 +7668,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7689,7 +7689,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7710,7 +7710,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7731,7 +7731,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7752,7 +7752,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7773,7 +7773,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7794,7 +7794,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7815,7 +7815,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7836,7 +7836,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7857,7 +7857,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7878,7 +7878,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7899,7 +7899,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7920,7 +7920,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7941,7 +7941,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -7962,7 +7962,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -7983,7 +7983,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8004,7 +8004,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8025,7 +8025,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8046,7 +8046,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8067,7 +8067,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8088,7 +8088,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8109,7 +8109,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_16sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8130,7 +8130,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8152,7 +8152,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8172,7 +8172,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8193,7 +8193,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8214,7 +8214,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8235,7 +8235,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8256,7 +8256,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8277,7 +8277,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8298,7 +8298,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8319,7 +8319,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8340,7 +8340,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8361,7 +8361,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8382,7 +8382,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8402,7 +8402,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8421,7 +8421,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8440,7 +8440,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8459,7 +8459,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8478,7 +8478,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8497,7 +8497,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8516,7 +8516,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8535,7 +8535,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8554,7 +8554,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8573,7 +8573,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8592,7 +8592,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8611,7 +8611,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8630,7 +8630,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8649,7 +8649,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8668,7 +8668,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8687,7 +8687,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSub_32fc_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -8707,7 +8707,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8728,7 +8728,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8749,7 +8749,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8770,7 +8770,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8791,7 +8791,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8812,7 +8812,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8833,7 +8833,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8854,7 +8854,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_8u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8875,7 +8875,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8896,7 +8896,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8917,7 +8917,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8938,7 +8938,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -8959,7 +8959,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -8980,7 +8980,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9001,7 +9001,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9022,7 +9022,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9043,7 +9043,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9064,7 +9064,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9085,7 +9085,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9106,7 +9106,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9127,7 +9127,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9148,7 +9148,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9169,7 +9169,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9190,7 +9190,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9211,7 +9211,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9232,7 +9232,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9253,7 +9253,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9274,7 +9274,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9295,7 +9295,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9316,7 +9316,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_16sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9337,7 +9337,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9359,7 +9359,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9379,7 +9379,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9400,7 +9400,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9421,7 +9421,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9442,7 +9442,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9463,7 +9463,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9484,7 +9484,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9505,7 +9505,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9526,7 +9526,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9547,7 +9547,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32sc_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9567,7 +9567,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9586,7 +9586,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9605,7 +9605,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9624,7 +9624,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9643,7 +9643,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9662,7 +9662,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9681,7 +9681,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9700,7 +9700,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32f_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9719,7 +9719,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9738,7 +9738,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9757,7 +9757,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9776,7 +9776,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9795,7 +9795,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9814,7 +9814,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9833,7 +9833,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9852,7 +9852,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_32fc_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -9873,7 +9873,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9896,7 +9896,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9919,7 +9919,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9942,7 +9942,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -9965,7 +9965,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -9988,7 +9988,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10011,7 +10011,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10034,7 +10034,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_8u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10057,7 +10057,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10080,7 +10080,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10103,7 +10103,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10126,7 +10126,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10149,7 +10149,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10172,7 +10172,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10195,7 +10195,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10218,7 +10218,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16u_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10241,7 +10241,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C1RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10264,7 +10264,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C1IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10287,7 +10287,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C3RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10310,7 +10310,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C3IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10333,7 +10333,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_AC4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10356,7 +10356,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_AC4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10379,7 +10379,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C4RSfs(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10402,7 +10402,7 @@ namespace CSCuda.NPP
         /// <param name="rndMode">Result Rounding mode to be used (NPP_RND_ZERO, NPP_RND_NEAR, or NP_RND_FINANCIAL)</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiDiv_Round_16s_C4IRSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10421,7 +10421,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10436,7 +10436,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10451,7 +10451,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10466,7 +10466,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10481,7 +10481,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10496,7 +10496,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10511,7 +10511,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10526,7 +10526,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_16s_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10541,7 +10541,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10556,7 +10556,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10571,7 +10571,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10586,7 +10586,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10601,7 +10601,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10616,7 +10616,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10631,7 +10631,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -10646,7 +10646,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbs_32f_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10663,7 +10663,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiff_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10684,7 +10684,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiff_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10705,7 +10705,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiff_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10726,7 +10726,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiff_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10747,7 +10747,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAbsDiff_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -10767,7 +10767,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10784,7 +10784,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10801,7 +10801,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10818,7 +10818,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10835,7 +10835,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10852,7 +10852,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10869,7 +10869,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10886,7 +10886,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_8u_C4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10903,7 +10903,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10920,7 +10920,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10937,7 +10937,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10954,7 +10954,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -10971,7 +10971,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -10988,7 +10988,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11005,7 +11005,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11022,7 +11022,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16u_C4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11039,7 +11039,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11056,7 +11056,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11073,7 +11073,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11090,7 +11090,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11107,7 +11107,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11124,7 +11124,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11141,7 +11141,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11158,7 +11158,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_16s_C4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11174,7 +11174,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11189,7 +11189,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11204,7 +11204,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11219,7 +11219,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11234,7 +11234,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11249,7 +11249,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11264,7 +11264,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11279,7 +11279,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqr_32f_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11295,7 +11295,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11312,7 +11312,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11329,7 +11329,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11346,7 +11346,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11363,7 +11363,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11380,7 +11380,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_8u_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11397,7 +11397,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11414,7 +11414,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11431,7 +11431,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11448,7 +11448,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11465,7 +11465,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11482,7 +11482,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16u_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11499,7 +11499,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11516,7 +11516,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11533,7 +11533,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11550,7 +11550,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11567,7 +11567,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_AC4RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11584,7 +11584,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_16s_AC4IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11600,7 +11600,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11615,7 +11615,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11630,7 +11630,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11645,7 +11645,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11660,7 +11660,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11675,7 +11675,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11690,7 +11690,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11705,7 +11705,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiSqrt_32f_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11721,7 +11721,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11738,7 +11738,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_8u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11755,7 +11755,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11772,7 +11772,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_8u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11789,7 +11789,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11806,7 +11806,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11823,7 +11823,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11840,7 +11840,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11857,7 +11857,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16s_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11874,7 +11874,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16s_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11891,7 +11891,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16s_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -11908,7 +11908,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_16s_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11924,7 +11924,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11939,7 +11939,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11954,7 +11954,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -11969,7 +11969,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLn_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -11985,7 +11985,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_8u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12002,7 +12002,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_8u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12019,7 +12019,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_8u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12036,7 +12036,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_8u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12053,7 +12053,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16u_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12070,7 +12070,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16u_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12087,7 +12087,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16u_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12104,7 +12104,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16u_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12121,7 +12121,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16s_C1RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12138,7 +12138,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16s_C1IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12155,7 +12155,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16s_C3RSfs(
             IntPtr pSrc,
             int nSrcStep,
@@ -12172,7 +12172,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="nScaleFactor">integer_result_scaling.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_16s_C3IRSfs(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12188,7 +12188,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_32f_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -12203,7 +12203,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_32f_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12218,7 +12218,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_32f_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -12233,7 +12233,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiExp_32f_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -12249,7 +12249,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12266,7 +12266,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C1IR(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -12283,7 +12283,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12300,7 +12300,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12317,7 +12317,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12334,7 +12334,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12351,7 +12351,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12368,7 +12368,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12385,7 +12385,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12402,7 +12402,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C1IR(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -12419,7 +12419,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12436,7 +12436,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12453,7 +12453,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12470,7 +12470,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12487,7 +12487,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12504,7 +12504,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12521,7 +12521,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12538,7 +12538,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C1IR(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -12555,7 +12555,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12572,7 +12572,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -12589,7 +12589,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12606,7 +12606,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -12623,7 +12623,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12640,7 +12640,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAndC_32s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -12657,7 +12657,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12674,7 +12674,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C1IR(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -12691,7 +12691,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12708,7 +12708,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12725,7 +12725,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12742,7 +12742,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12759,7 +12759,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12776,7 +12776,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -12793,7 +12793,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12810,7 +12810,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C1IR(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -12827,7 +12827,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12844,7 +12844,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12861,7 +12861,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12878,7 +12878,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12895,7 +12895,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12912,7 +12912,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -12929,7 +12929,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12946,7 +12946,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C1IR(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -12963,7 +12963,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -12980,7 +12980,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -12997,7 +12997,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13014,7 +13014,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -13031,7 +13031,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13048,7 +13048,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOrC_32s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -13065,7 +13065,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13082,7 +13082,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C1IR(
             Npp8u nConstant,
             IntPtr pSrcDst,
@@ -13099,7 +13099,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13116,7 +13116,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -13133,7 +13133,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13150,7 +13150,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -13167,7 +13167,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13184,7 +13184,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp8u[] aConstants,
             IntPtr pSrcDst,
@@ -13201,7 +13201,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13218,7 +13218,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C1IR(
             Npp16u nConstant,
             IntPtr pSrcDst,
@@ -13235,7 +13235,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13252,7 +13252,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -13269,7 +13269,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13286,7 +13286,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -13303,7 +13303,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13320,7 +13320,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp16u[] aConstants,
             IntPtr pSrcDst,
@@ -13337,7 +13337,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13354,7 +13354,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C1IR(
             Npp32s nConstant,
             IntPtr pSrcDst,
@@ -13371,7 +13371,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13388,7 +13388,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -13405,7 +13405,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13422,7 +13422,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -13439,7 +13439,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13456,7 +13456,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXorC_32s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32s[] aConstants,
             IntPtr pSrcDst,
@@ -13473,7 +13473,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13490,7 +13490,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -13507,7 +13507,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13524,7 +13524,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13541,7 +13541,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13558,7 +13558,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13575,7 +13575,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13592,7 +13592,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13609,7 +13609,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13626,7 +13626,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -13643,7 +13643,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13660,7 +13660,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13677,7 +13677,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13694,7 +13694,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13711,7 +13711,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13728,7 +13728,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_8s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13745,7 +13745,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13762,7 +13762,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -13779,7 +13779,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13796,7 +13796,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13813,7 +13813,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13830,7 +13830,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13847,7 +13847,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13864,7 +13864,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13881,7 +13881,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13898,7 +13898,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -13915,7 +13915,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13932,7 +13932,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13949,7 +13949,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -13966,7 +13966,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -13983,7 +13983,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14000,7 +14000,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_16s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14017,7 +14017,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14034,7 +14034,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -14051,7 +14051,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14068,7 +14068,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14085,7 +14085,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14102,7 +14102,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14119,7 +14119,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14136,7 +14136,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiRShiftC_32s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14153,7 +14153,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14170,7 +14170,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -14187,7 +14187,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14204,7 +14204,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14221,7 +14221,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14238,7 +14238,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14255,7 +14255,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14272,7 +14272,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_8u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14289,7 +14289,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14306,7 +14306,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -14323,7 +14323,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14340,7 +14340,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14357,7 +14357,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14374,7 +14374,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14391,7 +14391,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14408,7 +14408,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_16u_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14425,7 +14425,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14442,7 +14442,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C1IR(
             Npp32u nConstant,
             IntPtr pSrcDst,
@@ -14459,7 +14459,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14476,7 +14476,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C3IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14493,7 +14493,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14510,7 +14510,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_AC4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 3)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14527,7 +14527,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14544,7 +14544,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiLShiftC_32s_C4IR(
             [MarshalAs(UnmanagedType.LPArray, SizeConst = 4)]Npp32u[] aConstants,
             IntPtr pSrcDst,
@@ -14562,7 +14562,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14581,7 +14581,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14600,7 +14600,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14619,7 +14619,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14638,7 +14638,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14657,7 +14657,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14676,7 +14676,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14695,7 +14695,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14714,7 +14714,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14733,7 +14733,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14752,7 +14752,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14771,7 +14771,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14790,7 +14790,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14809,7 +14809,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14828,7 +14828,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14847,7 +14847,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14866,7 +14866,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14885,7 +14885,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14904,7 +14904,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14923,7 +14923,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14942,7 +14942,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14961,7 +14961,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -14980,7 +14980,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -14999,7 +14999,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAnd_32s_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15018,7 +15018,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15037,7 +15037,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15056,7 +15056,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15075,7 +15075,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15094,7 +15094,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15113,7 +15113,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15132,7 +15132,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15151,7 +15151,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15170,7 +15170,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15189,7 +15189,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15208,7 +15208,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15227,7 +15227,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15246,7 +15246,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15265,7 +15265,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15284,7 +15284,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15303,7 +15303,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15322,7 +15322,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15341,7 +15341,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15360,7 +15360,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15379,7 +15379,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15398,7 +15398,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15417,7 +15417,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15436,7 +15436,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15455,7 +15455,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiOr_32s_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15474,7 +15474,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15493,7 +15493,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15512,7 +15512,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15531,7 +15531,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15550,7 +15550,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15569,7 +15569,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15588,7 +15588,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15607,7 +15607,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_8u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15626,7 +15626,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15645,7 +15645,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15664,7 +15664,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15683,7 +15683,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15702,7 +15702,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15721,7 +15721,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15740,7 +15740,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15759,7 +15759,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_16u_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15778,7 +15778,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15797,7 +15797,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C1IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15816,7 +15816,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15835,7 +15835,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C3IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15854,7 +15854,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15873,7 +15873,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_AC4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15892,7 +15892,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -15911,7 +15911,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiXor_32s_C4IR(
             IntPtr pSrc,
             int nSrcStep,
@@ -15928,7 +15928,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C1R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15943,7 +15943,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C1IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -15958,7 +15958,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C3R(
             IntPtr pSrc,
             int nSrcStep,
@@ -15973,7 +15973,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C3IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -15988,7 +15988,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_AC4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16003,7 +16003,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -16018,7 +16018,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C4R(
             IntPtr pSrc,
             int nSrcStep,
@@ -16033,7 +16033,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiNot_8u_C4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -16053,7 +16053,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16080,7 +16080,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16107,7 +16107,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16134,7 +16134,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16161,7 +16161,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_8s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16188,7 +16188,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16215,7 +16215,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16242,7 +16242,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16269,7 +16269,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16296,7 +16296,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_16s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16323,7 +16323,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_32u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16350,7 +16350,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_32s_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16377,7 +16377,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaCompC_32f_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16400,7 +16400,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16417,7 +16417,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C1IR(
             Npp8u nAlpha1,
             IntPtr pSrcDst,
@@ -16434,7 +16434,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16451,7 +16451,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C3IR(
             Npp8u nAlpha1,
             IntPtr pSrcDst,
@@ -16468,7 +16468,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16485,7 +16485,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_C4IR(
             Npp8u nAlpha1,
             IntPtr pSrcDst,
@@ -16502,7 +16502,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16519,7 +16519,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_8u_AC4IR(
             Npp8u nAlpha1,
             IntPtr pSrcDst,
@@ -16536,7 +16536,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16553,7 +16553,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C1IR(
             Npp16u nAlpha1,
             IntPtr pSrcDst,
@@ -16570,7 +16570,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C3R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16587,7 +16587,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C3IR(
             Npp16u nAlpha1,
             IntPtr pSrcDst,
@@ -16604,7 +16604,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16621,7 +16621,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_C4IR(
             Npp16u nAlpha1,
             IntPtr pSrcDst,
@@ -16638,7 +16638,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16655,7 +16655,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremulC_16u_AC4IR(
             Npp16u nAlpha1,
             IntPtr pSrcDst,
@@ -16674,7 +16674,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_8u_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16697,7 +16697,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16720,7 +16720,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_8s_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16743,7 +16743,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_16u_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16766,7 +16766,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16789,7 +16789,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_16s_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16812,7 +16812,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32u_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16835,7 +16835,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16858,7 +16858,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32s_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16881,7 +16881,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32s_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16904,7 +16904,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32f_AC1R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16927,7 +16927,7 @@ namespace CSCuda.NPP
         /// <param name="oSizeROI">roi_specification.</param>
         /// <param name="eAlphaOp">alpha-blending operation..</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaComp_32f_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16947,7 +16947,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremul_8u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16962,7 +16962,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremul_8u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
@@ -16977,7 +16977,7 @@ namespace CSCuda.NPP
         /// <param name="nDstStep">destination_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremul_16u_AC4R(
             IntPtr pSrc1,
             int nSrc1Step,
@@ -16992,7 +16992,7 @@ namespace CSCuda.NPP
         /// <param name="nSrcDstStep">in_place_image_line_step.</param>
         /// <param name="oSizeROI">roi_specification.</param>
         /// <returns>image_data_error_codes, roi_error_codes</returns>
-        [DllImport(dllFileName, SetLastError = true)]
+        [DllImport(alDll, SetLastError = true)]
         public static extern NppStatus nppiAlphaPremul_16u_AC4IR(
             IntPtr pSrcDst,
             int nSrcDstStep,
