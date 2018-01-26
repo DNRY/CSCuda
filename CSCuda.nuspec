@@ -9,10 +9,8 @@
         <projectUrl>https://github.com/DNRY/CSCuda</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# wrapper for CUDA</description>
-        <releaseNotes>adopted CUDA 8.0 RC
-
-- cuda_8.0.27</releaseNotes>
-        <copyright>Copyright 2016</copyright>
+        <releaseNotes>$releaseNotes$</releaseNotes>
+        <copyright>Copyright $copyrightYear$</copyright>
         <language>en-US</language>
         <tags>CUDA NPP</tags>
         <frameworkAssemblies>
