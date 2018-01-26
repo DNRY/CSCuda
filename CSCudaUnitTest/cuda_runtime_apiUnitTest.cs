@@ -95,6 +95,48 @@ namespace CSCudaUnitTest
             Assert.AreEqual(status, cudaError.cudaSuccess);
         }
 
+
+        [DllImport("Kernel32", SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        public static extern bool VirtualLock(
+            IntPtr lpAddress,
+            ulong dwSize
+        );
+
+        [TestMethod]
+        public void cudaHostRegister_cudaHostUnRegister_test()
+        {
+            var length = 1024 * 1024;
+            var size = 1024 * 1024 * sizeof(float);
+            IntPtr ptr = Marshal.AllocHGlobal(size);
+
+            Assert.IsFalse(VirtualLock(ptr, (ulong)size));
+
+            var status = CudaRuntimeApi.cudaHostRegister(ptr, (ulong)size, DriverTypes.cudaHostRegisterDefault);
+            Assert.AreEqual(status, cudaError.cudaSuccess);
+            Console.WriteLine($"ptr : {ptr}");
+
+            float[] test = new float[length];
+            float[] result = new float[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                test[i] = Convert.ToSingle(i);
+            }
+
+            Marshal.Copy(test, 0, ptr, length);
+            Marshal.Copy(ptr, result, 0, length);
+
+            for (int i = 0; i < length; i++)
+            {
+                Assert.AreEqual(result[i], test[i]);
+            }
+
+            status = CudaRuntimeApi.cudaHostUnregister(ptr);
+            Assert.AreEqual(status, cudaError.cudaSuccess);
+
+            Marshal.FreeHGlobal(ptr);
+        }
+
         [TestMethod]
         public void cudaMemGetInfo_test()
         {
