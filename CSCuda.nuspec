@@ -9,10 +9,10 @@
         <projectUrl>https://github.com/DNRY/CSCuda</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# wrapper for CUDA</description>
-        <releaseNotes>$releaseNotes$</releaseNotes>
+		<releaseNotes>$releaseNotes$</releaseNotes>
         <copyright>Copyright $copyrightYear$</copyright>
         <language>en-US</language>
-        <tags>CUDA NPP</tags>
+        <tags>CUDA NPP CUBLAS</tags>
         <frameworkAssemblies>
             <frameworkAssembly assemblyName="System" targetFramework="" />
             <frameworkAssembly assemblyName="System.Core" targetFramework="" />
