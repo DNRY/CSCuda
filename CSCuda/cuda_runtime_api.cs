@@ -76,6 +76,18 @@ namespace CSCuda
             );
 
         [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        public static extern cudaError cudaHostRegister(
+            IntPtr devPtr,
+            ulong size,
+            uint flags
+            );
+
+        [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
+        public static extern cudaError cudaHostUnregister(
+            IntPtr ptr
+        );
+
+        [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern cudaError cudaMalloc3DArray(
             ref IntPtr array,
             ref cudaChannelFormatDesc desc,

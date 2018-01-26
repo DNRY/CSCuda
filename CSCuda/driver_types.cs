@@ -7,6 +7,24 @@ using System.Threading.Tasks;
 
 namespace CSCuda
 {
+    public class DriverTypes
+    {
+        public const uint cudaHostAllocDefault = 0x00;  /**< Default page-locked allocation flag */
+        public const uint cudaHostAllocPortable = 0x01;  /**< Pinned memory accessible by all CUDA contexts */
+        public const uint cudaHostAllocMapped = 0x02;  /**< Map allocation into device space */
+        public const uint cudaHostAllocWriteCombined = 0x04;  /**< Write-combined memory */
+
+        public const uint cudaHostRegisterDefault = 0x00;  /**< Default host memory registration flag */
+        public const uint cudaHostRegisterPortable = 0x01;  /**< Pinned memory accessible by all CUDA contexts */
+        public const uint cudaHostRegisterMapped = 0x02;  /**< Map registered memory into device space */
+        public const uint cudaHostRegisterIoMemory = 0x04;  /**< Memory-mapped I/O space */
+
+        public const uint cudaPeerAccessDefault = 0x00;  /**< Default peer addressing enable flag */
+
+        public const uint cudaStreamDefault = 0x00;  /**< Default stream flag */
+        public const uint cudaStreamNonBlocking = 0x01;  /**< Stream does not synchronize with stream 0 (the NULL stream) */
+    }
+
     /// <summary>
     /// CUDA error types
     /// </summary>
