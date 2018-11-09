@@ -8,7 +8,7 @@ namespace CSCuda
 {
     public static class Constants
     {
-        public const string version = "91";
+        public const string version = "100";
         public const string platform = "64";
     }
 }
