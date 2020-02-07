@@ -9,7 +9,7 @@ namespace CSCuda
 {   
     public static class CudaRuntimeApi
     {
-        private const string cudartString = @"cudart" + Constants.platform + "_" + Constants.version;
+        private const string cudartString = @"cudart" + Constants.platform + "_" + Constants.major_version + Constants.minor_version;
 
         [DllImport(cudartString, SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern cudaError cudaDeviceReset();

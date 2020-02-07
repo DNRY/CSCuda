@@ -34,7 +34,7 @@ namespace CSCuda.CUBLAS
 
     public static class Cublas_api
     {
-        internal const string dllName = @"cublas" + Constants.platform + "_" + Constants.version;
+        internal const string dllName = @"cublas" + Constants.platform + "_" + Constants.major_version;
 
         [DllImport(dllName, CallingConvention = CallingConvention.Cdecl)]
         public static extern cublasStatus_t cublasCreate_v2(ref IntPtr handle);

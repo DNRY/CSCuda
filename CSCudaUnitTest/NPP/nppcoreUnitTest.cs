@@ -15,13 +15,6 @@ namespace CSCudaUnitTest
             Console.WriteLine("NPP version : {0}.{1}", version.major, version.minor);
         }
 
-        [TestMethod]
-        public void nppGetGpuComputeCapability_test()
-        {
-            NppGpuComputeCapability capability = NppCore.nppGetGpuComputeCapability();
-
-            Console.WriteLine("{0}", capability.ToString());
-        }
 
         [TestMethod]
         public void nppGetGpuNumSMs_test()
