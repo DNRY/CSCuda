@@ -108,7 +108,7 @@ namespace CSCudaUnitTest
             var mB = Matrix<float>.Build.Dense(rows_b, cols_b, B);
             var mExpectedC = Matrix<float>.Build.Dense(rows_c, cols_c, C).Clone();
             mExpectedC = alpha * mA * mB + beta * mExpectedC;
-            float[] expected = mExpectedC.ToColumnWiseArray();
+            float[] expected = mExpectedC.ToColumnMajorArray();
 
             Console.WriteLine("alpha : {0}, beta : {1}", alpha, beta);
             Console.WriteLine("A");
@@ -225,7 +225,7 @@ namespace CSCudaUnitTest
             var mB = Matrix<double>.Build.Dense(rows_b, cols_b, B);
             var mExpectedC = Matrix<double>.Build.Dense(rows_c, cols_c, C).Clone();
             mExpectedC = alpha * mA * mB + beta * mExpectedC;
-            var expected = mExpectedC.ToColumnWiseArray();
+            var expected = mExpectedC.ToColumnMajorArray();
 
             Console.WriteLine("alpha : {0}, beta : {1}", alpha, beta);
             Console.WriteLine("A");
@@ -372,7 +372,7 @@ namespace CSCudaUnitTest
             var mB = Matrix<Complex32>.Build.Dense(rows_b, cols_b, cB);
             var mExpectedC = Matrix<Complex32>.Build.Dense(rows_c, cols_c, cC).Clone();
             mExpectedC = cAlpha * mA * mB + cBeta * mExpectedC;
-            Complex32[] expected = mExpectedC.ToColumnWiseArray();
+            Complex32[] expected = mExpectedC.ToColumnMajorArray();
 
             Console.WriteLine("alpha : {0}, beta : {1}", alpha, beta);
             Console.WriteLine("A");
