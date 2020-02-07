@@ -8,6 +8,6 @@ namespace CSCuda.NPP
 {
     public partial class Npps
     {
-        private const string dllFileName = @"npps" + Constants.platform + "_" + Constants.version;
+        private const string dllFileName = @"npps" + Constants.platform + "_" + Constants.major_version;
     }
 }

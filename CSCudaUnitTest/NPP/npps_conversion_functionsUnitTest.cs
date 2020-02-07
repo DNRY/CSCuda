@@ -58,6 +58,53 @@ namespace CSCudaUnitTest.NPP
         }
 
         [TestMethod]
+        public void nppsConvert_32f16s_test()
+        {
+            NppStatus nppStatus;
+            cudaError cudaStatus;
+            int length = 1024;
+            int value = 75;
+            float expected = 75.0F;
+
+            IntPtr d_src = Npps.nppsMalloc_32f(length);
+            IntPtr d_dst = Npps.nppsMalloc_16s(length);
+
+            short[] result = new short[length];
+
+            GCHandle gcHandle = GCHandle.Alloc(result, GCHandleType.Pinned);
+            IntPtr h_result = Marshal.UnsafeAddrOfPinnedArrayElement(result, 0);
+            UInt64 size = Convert.ToUInt64(sizeof(short) * result.Length);
+
+            nppStatus = Npps.nppsSet_32f((float)value, d_src, length);
+            if (nppStatus != NppStatus.NPP_SUCCESS)
+            {
+                Assert.Fail(String.Format("Fail {0}", nppStatus.ToString()));
+            }
+
+            nppStatus = Npps.nppsConvert_32f16s_Sfs(d_src, d_dst, length, NppRoundMode.NPP_RND_NEAR, 0);
+            if (nppStatus != NppStatus.NPP_SUCCESS)
+            {
+                Assert.Fail(String.Format("Fail {0}", nppStatus.ToString()));
+            }
+
+
+            cudaStatus = CudaRuntimeApi.cudaMemcpy(h_result, d_dst, size, cudaMemcpyKind.DeviceToHost);
+            if (cudaStatus != cudaError.cudaSuccess)
+            {
+                Assert.Fail(String.Format("Fail {0}", cudaStatus.ToString()));
+            }
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                Assert.AreEqual(expected, result[i]);
+            }
+
+            gcHandle.Free();
+            Npps.nppsFree(d_src);
+            Npps.nppsFree(d_dst);
+        }
+
+        [TestMethod]
         public void nppsThreshold_32f_test()
         {
             NppStatus nppStatus;
