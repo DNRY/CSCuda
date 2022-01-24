@@ -33,11 +33,11 @@ test: off
 artifacts:
   - path: README.md
     name: README.md
-  - path: CSCuda\bin\$(configuration)\CSCuda.dll
+  - path: CSCuda\bin\$(configuration)\net6.0-windows\CSCuda.dll
     name: CSCuda.dll
-  - path: CSCuda.NPP\bin\$(configuration)\CSCuda.NPP.dll
+  - path: CSCuda.NPP\bin\$(configuration)\net6.0-windows\CSCuda.NPP.dll
     name: CSCuda.NPP.dll
-  - path: CSCuda.CUBLAS\bin\$(configuration)\CSCuda.CUBLAS.dll
+  - path: CSCuda.CUBLAS\bin\$(configuration)\net6.0-windows\CSCuda.CUBLAS.dll
     name: CSCuda.CUBLAS.dll    
   - path: '**\CSCuda*.nupkg'
 
