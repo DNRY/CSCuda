@@ -22,7 +22,7 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="README.md" />
+        <file src="README.md" target="README.md" />
         <file src="CSCuda\bin\Release\net6.0-windows\CSCuda.dll" target="lib\net6.0\CSCuda.dll" />
         <file src="CSCuda.NPP\bin\Release\net6.0-windows\CSCuda.NPP.dll" target="lib\net6.0\CSCuda.NPP.dll" />
         <file src="CSCuda.CUBLAS\bin\Release\net6.0-windows\CSCuda.CUBLAS.dll" target="lib\net6.0\CSCuda.CUBLAS.dll" />
