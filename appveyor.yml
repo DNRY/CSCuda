@@ -31,6 +31,8 @@ test: off
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
+  - path: README.md
+    name: README.md
   - path: CSCuda\bin\$(configuration)\CSCuda.dll
     name: CSCuda.dll
   - path: CSCuda.NPP\bin\$(configuration)\CSCuda.NPP.dll
@@ -42,6 +44,6 @@ artifacts:
 deploy:
   provider: NuGet
   api_key:
-    secure: d4jcCJMdFpCx6+/pASUI3NAjbyQa9aLpJ0ePNCPFOQRYUbaJpUkLUGV/baRFLsG8
-  skip_symbols: false
+    secure: 655MRVhUca4e6pq3iUY26xdAqRYK/quSsTauo9kHqVcQJbJ52uzNCj2YEFaw5uqT
+  skip_symbols: true
   artifact: /.*\.nupkg/

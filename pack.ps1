@@ -1,5 +1,5 @@
 $root = (split-path -parent $MyInvocation.MyCommand.Definition)
-$version = [System.Reflection.Assembly]::LoadFile("$root\CSCuda\bin\Release\CSCuda.dll").GetName().Version
+$version = [System.Reflection.Assembly]::LoadFile("$root\CSCuda\bin\Release\net6.0-windows\CSCuda.dll").GetName().Version
 $versionStr = "{0}.{1}.{2}" -f ($version.Major, $version.Minor, $version.Build)
 
 $commitLog = git log -1 --pretty=%B
