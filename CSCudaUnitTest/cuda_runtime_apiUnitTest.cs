@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace CSCudaUnitTest
 {
@@ -31,14 +32,41 @@ namespace CSCudaUnitTest
             Console.WriteLine("cuda device count : {0}", count);
         }
 
+        public string HexStringFromByteArray(byte[] bytes)
+        {
+            var sb = new StringBuilder(bytes.Length * 2);
+            foreach (var b in bytes)
+            {
+                sb.AppendFormat("{0:x2}", b);
+            }
+            return sb.ToString();
+        }
+
+        public byte[] UnsignedBytesFromSignedBytes(sbyte[] signed)
+        {
+            var unsigned = new byte[signed.Length];
+            Buffer.BlockCopy(signed, 0, unsigned, 0, signed.Length);
+            return unsigned;
+        }
+
         [TestMethod]
         public void cudaSetDevice_cudaGetDeviceProperties_cudaDriverGetVersion_cudaRuntimeGetVersion_test()
         {
-            int count = 0;
-            var status = CudaRuntimeApi.cudaGetDeviceCount(ref count);
+            int deviceCount = 0;
+            var status = CudaRuntimeApi.cudaGetDeviceCount(ref deviceCount);
             Assert.AreEqual(status, cudaError.cudaSuccess);
 
-            for (int i = 0; i < count; i++)
+            // This function call returns 0 if there are no CUDA capable devices.
+            if (deviceCount == 0)
+            {
+                Console.WriteLine("There are no available device(s) that support CUDA");
+            }
+            else
+            {
+                Console.WriteLine("Detected {0} CUDA Capable device(s)", deviceCount);
+            }
+
+            for (int i = 0; i < deviceCount; i++)
             {
                 status = CudaRuntimeApi.cudaSetDevice(i);
                 Assert.AreEqual(status, cudaError.cudaSuccess);
@@ -52,16 +80,24 @@ namespace CSCudaUnitTest
                 cudaDeviceProp deviceProp = new cudaDeviceProp();
                 CudaRuntimeApi.cudaGetDeviceProperties(ref deviceProp, i);
 
-                Console.WriteLine("  CUDA Driver Version / Runtime Version          {0}.{1} / {2}.{3}\n", driverVersion / 1000, (driverVersion % 100) / 10, runtimeVersion / 1000, (runtimeVersion % 100) / 10);
-                Console.WriteLine("  CUDA Capability Major/Minor version number:    {0}.{1}\n", deviceProp.major, deviceProp.minor);
+                var uuid = HexStringFromByteArray(UnsignedBytesFromSignedBytes(deviceProp.uuid.bytes));
                 unsafe
                 {
                     fixed (sbyte* pName = deviceProp.name)
                     {
                         var name = new string(pName);
-                        Console.WriteLine(name);
+                        //Console.WriteLine("{0}, uuid = {1}", name, uuid);
+
+                        Console.WriteLine("\nDevice {0}: \"{1}\", uuid = {2}", i, name, uuid);
                     }
                 }
+
+                Console.WriteLine("  CUDA Driver Version / Runtime Version          {0}.{1} / {2}.{3}", driverVersion / 1000, (driverVersion % 100) / 10, runtimeVersion / 1000, (runtimeVersion % 100) / 10);
+                Console.WriteLine("  CUDA Capability Major/Minor version number:    {0}.{1}", deviceProp.major, deviceProp.minor);
+                Console.WriteLine(
+                  "  Total amount of global memory:                 {0:0} MBytes ({1} bytes)",
+                  Convert.ToSingle(deviceProp.totalGlobalMem / 1048576.0f),
+                  deviceProp.totalGlobalMem);
             }
         }
 
@@ -94,7 +130,6 @@ namespace CSCudaUnitTest
             status = CudaRuntimeApi.cudaFreeHost(ptr);
             Assert.AreEqual(status, cudaError.cudaSuccess);
         }
-
 
         [DllImport("Kernel32", SetLastError = true, CallingConvention = CallingConvention.Cdecl)]
         public static extern bool VirtualLock(
