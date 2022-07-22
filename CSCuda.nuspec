@@ -18,7 +18,7 @@
             <frameworkAssembly assemblyName="System.Core" targetFramework="" />
         </frameworkAssemblies>
         <dependencies>
-            <group targetFramework="net6.0-windows" />
+            <group targetFramework="net6.0" />
         </dependencies>
     </metadata>
     <files>
