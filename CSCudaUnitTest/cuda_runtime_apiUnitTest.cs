@@ -77,27 +77,20 @@ namespace CSCudaUnitTest
                 status = CudaRuntimeApi.cudaRuntimeGetVersion(ref runtimeVersion);
                 Assert.AreEqual(status, cudaError.cudaSuccess);
 
-                cudaDeviceProp deviceProp = new cudaDeviceProp();
+                var deviceProp = new cudaDeviceProp();
                 CudaRuntimeApi.cudaGetDeviceProperties(ref deviceProp, i);
 
                 var uuid = HexStringFromByteArray(UnsignedBytesFromSignedBytes(deviceProp.uuid.bytes));
-                unsafe
-                {
-                    fixed (sbyte* pName = deviceProp.name)
-                    {
-                        var name = new string(pName);
-                        //Console.WriteLine("{0}, uuid = {1}", name, uuid);
-
-                        Console.WriteLine("\nDevice {0}: \"{1}\", uuid = {2}", i, name, uuid);
-                    }
-                }
-
-                Console.WriteLine("  CUDA Driver Version / Runtime Version          {0}.{1} / {2}.{3}", driverVersion / 1000, (driverVersion % 100) / 10, runtimeVersion / 1000, (runtimeVersion % 100) / 10);
-                Console.WriteLine("  CUDA Capability Major/Minor version number:    {0}.{1}", deviceProp.major, deviceProp.minor);
+                var devName = Encoding.Default.GetString(UnsignedBytesFromSignedBytes(deviceProp.name)).TrimEnd('\0');
+                Console.WriteLine("\nDevice {0}: \"{1}\", uuid = {2}", i, devName, uuid);
+                Console.WriteLine("  CUDA Driver Version / Runtime Version          {0}.{1} / {2}.{3}",
+                    driverVersion / 1000, (driverVersion % 100) / 10,
+                    runtimeVersion / 1000, (runtimeVersion % 100) / 10);
+                Console.WriteLine("  CUDA Capability Major/Minor version number:    {0}.{1}",
+                    deviceProp.major, deviceProp.minor);
                 Console.WriteLine(
-                  "  Total amount of global memory:                 {0:0} MBytes ({1} bytes)",
-                  Convert.ToSingle(deviceProp.totalGlobalMem / 1048576.0f),
-                  deviceProp.totalGlobalMem);
+                    "  Total amount of global memory:                 {0:0} MBytes ({1} bytes)",
+                    Convert.ToSingle(deviceProp.totalGlobalMem / 1048576.0f), deviceProp.totalGlobalMem);
             }
         }
 
