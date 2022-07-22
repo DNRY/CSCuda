@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace CSCuda
 {
+    using cudaUUID_t = CUuuid_st;
+
     public class DriverTypes
     {
         public const uint cudaHostAllocDefault = 0x00;  /**< Default page-locked allocation flag */
@@ -626,6 +628,13 @@ namespace CSCuda
         Default = 4          // Default based unified virtual address space
     }
 
+    [StructLayout(LayoutKind.Sequential)]
+    public struct CUuuid_st
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
+        public sbyte[] bytes;
+    }
+
     /// <summary>
     /// CUDA device properties
     /// </summary>
@@ -634,6 +643,10 @@ namespace CSCuda
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
         public sbyte[] name;                  // ASCII string identifying device
+        public cudaUUID_t uuid;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
+        public sbyte[] luid;
+        public uint luidDeviceNodeMask;
         public Int64 totalGlobalMem;             // Global memory available on device in bytes
         public Int64 sharedMemPerBlock;          // Shared memory available per block in bytes
         public int regsPerBlock;               // 32-bit registers available per block
@@ -711,6 +724,20 @@ namespace CSCuda
         public int managedMemory;              // Device supports allocating managed memory on this system
         public int isMultiGpuBoard;            // Device is on a multi-GPU board
         public int multiGpuBoardGroupID;       // Unique identifier for a group of devices on the same multi-GPU board
+        public int hostNativeAtomicSupported;  // Link between the device and the host supports native atomic operations
+        public int singleToDoublePrecisionPerfRatio; // Ratio of single precision performance (in floating-point operations per second) to double precision performance
+        public int pageableMemoryAccess;       // Device supports coherently accessing pageable memory without calling cudaHostRegister on it
+        public int concurrentManagedAccess;    // Device can coherently access managed memory concurrently with the CPU
+        public int computePreemptionSupported; // Device supports Compute Preemption
+        public int canUseHostPointerForRegisteredMem; // Device can access host registered memory at the same virtual address as the CPU
+        public int cooperativeLaunch;          // Device supports launching cooperative kernels via ::cudaLaunchCooperativeKernel
+        public int cooperativeMultiDeviceLaunch; // Deprecated, cudaLaunchCooperativeKernelMultiDevice is deprecated.
+        public Int64 sharedMemPerBlockOptin;     // Per device maximum shared memory per block usable by special opt in
+        public int pageableMemoryAccessUsesHostPageTables; // Device accesses pageable memory via the host's page tables
+        public int directManagedMemAccessFromHost; // Host can directly access managed memory on the device without migration.
+        public int maxBlocksPerMultiProcessor; // Maximum number of resident blocks per multiprocessor
+        public int accessPolicyMaxWindowSize;  // The maximum value of ::cudaAccessPolicyWindow::num_bytes.
+        public Int64 reservedSharedMemPerBlock;  // Shared memory reserved by CUDA driver per block in bytes
     }
 
     /// <summary>
